@@ -562,7 +562,9 @@ footer {
 }
 
 /*--------- -----------new styles ------------------------ */
-
+#search-form i{
+  color:#fff;
+}
 /* btn signin/ signup */
 @media only screen and (max-width: 363px) {
   #icon {
@@ -611,7 +613,11 @@ footer {
 }
 @media only screen and (max-width: 575px) {
   #search-form {
-    width:100%;
-    margin:0.2rem;
-}
+    width: 100%;
+    margin: 0.2rem;
+  }
+  #search-form i{
+    margin-left: 10px;
+    color:#fff;
+  }
 }

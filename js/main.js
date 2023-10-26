@@ -42,7 +42,6 @@ window.addEventListener("resize", function () {
     let div = document.getElementById("add-searchbar");
     div.appendChild(form);
   } else {
-    if (window.innerWidth > 575) {
     let form = document.getElementById("search-form");
     let div = document.getElementById("add-searchbar");
     let navRight = document.getElementById("nav-right");
@@ -50,6 +49,6 @@ window.addEventListener("resize", function () {
     div.removeChild(form);
     navRight.appendChild(form)
 
-}
+
   }
 });
