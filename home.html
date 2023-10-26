@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/animate.css">
+    <link rel="stylesheet" href="./CSS/flexboxgrid.css">
+    <link rel="stylesheet" href="./CSS/owl.carsousel.min.css">
+    <link rel="stylesheet" href="./CSS/owl.theme.default.min.css">
+    <meta http-equiv="X-VA-Compatible" content="ie=edge" />
+    
+    <link
+     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/P1.jpg"> 
+</head>
+<body>
+    <header>
+      <nav style="display:flex; flex-direction:column;">
+        <div style="flex-direction:row; display:flex; justify-content: space-between;">
+          <div class="nav-right">
+              <a href=""><i class="far fa-user"></i></a>
+              <a href=""><i class="fas fa-shopping-cart"></i></a>
+              <a href=""><i class="fas fa-home"></i></a>
+              <!-- serach input -->
+              <form id="search-form" >
+                <input type="text" placeholder="جستو جو کنید...">
+                <a href="#"><i class="fas fa-search"></i></a>
+              </form>
+              <!-- end of serach input -->
+              
+          </div>
+          <div class="nav-left">
+              <div class="register-login-btn">
+                  <i class="fas fa-user" id="icon"></i>
+                  <!--  آدرس صفحه مدنظر رو تو href مینویسیم -->
+                  <a id="nav-link" href="./login.html" >ثبت نام / ورود</a>
+                  
+              </div>
+          </div>
+        </div>
+
+        <div id="add-searchbar" style="width:100%;"></div>
+    </nav>
+        <section class="slider">
+            <div class="slides">
+                <div class="item active" id="slide1">
+                <img src="./images/s1.jpg" alt="">
+                
+            </div>
+                <div class="item" id="slide2">
+                <img src="./images/s2.jpg" alt="">
+                
+            </div>
+                <div class="item" id="slide3">
+                <img src="./images/s3.jpg" alt="">
+                
+            </div>
+            <div class="buttons">
+                <i onclick="setSlide('slide1' , 1)" class="fa-solid fa-circle"></i>
+                <i onclick="setSlide('slide2' , 2)" class="fa-solid fa-circle"></i>
+                <i onclick="setSlide('slide3' , 3)" class="fa-solid fa-circle"></i>
+            </div>
+
+        </section>
+    </header>
+    <main id="main">
+    
+      <section class="dragble-list">
+        <div class="title">
+          <span></span>
+        </div>
+        <div id="owl-product" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/home2.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+               T-shirt
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">70 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/home3 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+              لباس زنانه
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">500 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/landing1 - Copy.jpg" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+               عینک
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">600 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i>
+                    </a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/landing3 - Copy.jpg" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                لباس 
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">200 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/landing4 - Copy.jpg" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                لاکت
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">900 </span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/product6 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                کفش
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">900 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/product13 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                رو سری
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">900 </span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/product13-2 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+               مانتو
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">900 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/product14 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                شلوار
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">900</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/product11 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                کت و شلوار
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">700 تومان</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/product12 - Copy.png" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                عینک
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">900 </span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="./images/h5.jpg" alt="" />
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="title">
+                هدفون
+              </div>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">750</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علافه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""
+                      ><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="banner">
+
+        <!--text---------->
+        <div class="banner-text">
+          <strong>بوت های شیک</strong>
+          <span> از 700 افغانی</span>
+          <p>بوت های راحت برای استفاده</p>
+          <a href="#">حالا خرید کنید</a>
+        </div>
+         <!--img--------------->
+         <div class="banner-img">
+         <img src="./images/super-product.jpg" alt="">
+        </div>
+        </section>
+         <div class="product-list" id="product-list">
+        <section class="product-sec-new">
+         
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                <div class="shoping-card">
+                  <div class="img-sec">
+                      <img src="./images/h5.jpg" alt="">
+                      <span class="hot-offer">پیشنهاد ویژه</span>
+                      </span>
+                      <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </div>
+                  </div>
+                  <h2>هدفون</h2>
+                  <div class="buttons">
+                      <div class="right">
+                          <span class="price">10000 </span>
+      
+                      </div>
+                      <div class="left">
+                          <div class="extend-btn">
+                          <a class="b-text" href="">علاقه</a>
+                          <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                      </div>
+                      <div class="extend-btn">
+                          <a class="b-text" href="">خرید</a>
+                          <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                       </div>
+                    </div>
+                  </div>
+                 </div>
+              </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+              <div class="shoping-card">
+                <div class="img-sec">
+                    <img src="./images/product14-2 - Copy.png" alt="">
+                    </span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <h2>طفلانه</h2>
+                <div class="buttons">
+                    <div class="right">
+                        <span class="price">1200 </span>
+      
+                    </div>
+                    <div class="left">
+                      <div class="extend-btn">
+                        <a class="b-text" href="">علاقه</a>
+                        <a  class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="extend-btn">
+                        <a class="b-text" href="">خرید</a>
+                        <a  class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                     </div>
+                  </div>
+               </div>
+             </div>
+           </div>
+           
+           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+              <div class="shoping-card">
+                <div class="img-sec">
+                    <img src="./images/h7.jpg" alt="">
+                    <span class="hot-offer">پیشنهاد ویژه</span>
+                    </span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <h2>هندزفری</h2>
+                <div class="buttons">
+                    <div class="right">
+                        <span class="price">70</span>
+      
+                    </div>
+                    <div class="left">
+                      <div class="extend-btn">
+                        <a class="b-text" href="">علاقه</a>
+                        <a  class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="extend-btn">
+                        <a class="b-text" href="">خرید</a>
+                        <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                     </div>
+                  </div>
+               </div>
+           </div>
+           </div>
+           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+              <div class="shoping-card">
+                <div class="img-sec">
+                    <img src="./images/product6 - Copy.png" alt="">
+                    </span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <h2>کفش</h2>
+                <div class="buttons">
+                    <div class="right">
+                        <span class="price">2000 </span>
+      
+                    </div>
+                    <div class="left">
+                      <div class="extend-btn">
+                        <a class="b-text" href="">علاقه</a>
+                        <a  class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="extend-btn">
+                        <a  class="b-text" href="">خرید</a>
+                        <a class="b-icon"  href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                     </div>
+                  </div>
+               </div>
+           </div>
+          </div>
+      
+            </div>
+          
+         </section>
+        </div>
+        <div class="product-list" id="product-list">
+          <section class="product-sec-new">
+           
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                  <div class="shoping-card">
+                    <div class="img-sec">
+                        <img src="./images/product1 - Copy.png" alt="">
+                        <span class="hot-offer">پیشنهاد ویژه</span>
+                        </span>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h2>کیف</h2>
+                    <div class="buttons">
+                        <div class="right">
+                            <span class="price">10000 </span>
+        
+                        </div>
+                        <div class="left">
+                            <div class="extend-btn">
+                            <a class="b-text" href="">علاقه</a>
+                            <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                        </div>
+                        <div class="extend-btn">
+                            <a class="b-text" href="">خرید</a>
+                            <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                         </div>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                <div class="shoping-card">
+                  <div class="img-sec">
+                      <img src="./images/product14-2 - Copy.png" alt="">
+                      </span>
+                      <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </div>
+                  </div>
+                  <h2>شلوار شیک</h2>
+                  <div class="buttons">
+                      <div class="right">
+                          <span class="price">1200 </span>
+        
+                      </div>
+                      <div class="left">
+                        <div class="extend-btn">
+                          <a class="b-text" href="">علاقه</a>
+                          <a  class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                      </div>
+                      <div class="extend-btn">
+                          <a class="b-text" href="">خرید</a>
+                          <a  class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                       </div>
+                    </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                <div class="shoping-card">
+                  <div class="img-sec">
+                      <img src="./images/product12 - Copy.png" alt="">
+                      <span class="hot-offer">پیشنهاد ویژه</span>
+                      </span>
+                      <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </div>
+                  </div>
+                  <h2>بهترین لباس </h2>
+                  <div class="buttons">
+                      <div class="right">
+                          <span class="price">70</span>
+        
+                      </div>
+                      <div class="left">
+                        <div class="extend-btn">
+                          <a class="b-text" href="">علاقه</a>
+                          <a  class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                      </div>
+                      <div class="extend-btn">
+                          <a class="b-text" href="">خرید</a>
+                          <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                       </div>
+                    </div>
+                 </div>
+             </div>
+             </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                <div class="shoping-card">
+                  <div class="img-sec">
+                      <img src="./images/product7 - Copy.png - Copy.png" alt="">
+                      </span>
+                      <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </div>
+                  </div>
+                  <h2>بلوس</h2>
+                  <div class="buttons">
+                      <div class="right">
+                          <span class="price">2000 </span>
+        
+                      </div>
+                      <div class="left">
+                
+                      <div class="extend-btn">
+                          <a class="b-text" href="">علاقه</a>
+                          <a  class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                      </div>
+                      <div class="extend-btn">
+                          <a  class="b-text" href="">خرید</a>
+                          <a class="b-icon"  href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                       </div>
+                    </div>
+                 </div>
+             </div>
+            </div>
+        
+              </div>
+            
+           </section>
+          </div>
+
+     </section>
+    </main>
+
+  
+  
+    
+<footer>
+    <div class="footer-container">
+
+      <!--logo-container----->
+      <div class="footer-logo-container">
+        <!--logo--->
+        <div class="footer-logo">Logo</div>
+        <!--text--->
+        <span>copyright 2023 - GoingToInternent</span>
+        <!--social--->
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+
+      <!--footer-menu------------------------------->
+      <div class="footer-menu">
+
+        <!--footer-menu-box------->
+        <div class="footer-menu-box">
+          <strong>محصولات</strong>
+
+
+          <ul>
+            <li><a href="#">خالی</a></li>
+            <li><a href="#">لباس های شیک دخترانه</a></li>
+            <li><a href="#">جدبد ترین لباس های طفلانه</a></li>
+
+          </ul>
+        </div>
+        
+      <!--footer-menu------------------------------->
+      <div class="footer-menu">
+
+        <!--footer-menu-box------->
+        <div class="footer-menu-box">
+          <strong>محصولات</strong>
+
+
+          <ul>
+            <li><a href="#">لباس های زنانه و مردانه</a></li>
+            <li><a href="#"> کفش های جدید زنانه و مردانه</a></li>
+            <li><a href="#">عطریات و لوازم آرایشی</a></li>
+
+          </ul>
+        </div>
+        
+      <!--footer-menu------------------------------->
+      <div class="footer-menu">
+
+        <!--footer-menu-box------->
+        <div class="footer-menu-box">
+          <strong>محصولات</strong>
+
+
+          <ul>
+            <li><a href="#">انتیک ترین ظروف های چینی و پلاسکو</a></li>
+            <li><a href="#">خالی</a></li>
+            <li><a href="#"> خالی</a></li>
+
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+</footer>
+
+<!--copyright-------------------------->
+<span class="copyright">copyright 2023
+</span>
+<script src="./js/main.js"></script>
+    <script 
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/owl.carsouel.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
