@@ -54,6 +54,8 @@ window.addEventListener("resize", function () {
   }
 });
 
+
+
 ///////////////////////////input search///////////////////////
 const searchIcon = $.querySelector("#search-icon");
 function searchProducts() {
