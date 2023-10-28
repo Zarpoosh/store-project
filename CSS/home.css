@@ -615,3 +615,11 @@ footer {
     margin:0.2rem;
 }
 }
+
+
+/* ----------------------result-container----------------- */
+#result-container{
+  width: 100%;
+  height: 300px;
+  background: #00000071;
+}
