@@ -56,7 +56,7 @@ window.addEventListener("resize", function () {
 
 
 
-///////////////////////////input search///////////////////////
+/////////////////////////input search///////////////////////
 const searchIcon = $.querySelector("#search-icon");
 function searchProducts() {
   console.log("clicked");
