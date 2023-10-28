@@ -53,3 +53,18 @@ window.addEventListener("resize", function () {
 }
   }
 });
+
+
+
+//////////////////////input search///////////////////////
+const searchInput=$.querySelector("#search-form input")
+const searchIcon=$.querySelector("#search-icon");
+
+
+searchIcon.addEventListener("click", function(){
+  console.log("clicked")
+})
+
+searchInput.addEventListener("keydown",function (event) {
+    console.log(event.value)
+} )
