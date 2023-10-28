@@ -55,28 +55,7 @@ window.addEventListener("resize", function () {
 });
 
 ///////////////////////////input search///////////////////////
-// const searchInput=$.querySelector("#search-form input")
 const searchIcon = $.querySelector("#search-icon");
-
-// searchIcon.addEventListener("click", function searchProduct(){
-//   // console.log("clicked")
-//   const searchValue=$.querySelector("#search-form input").value;
-//   const result=allProducts.filter(function(product){
-//     return product.name.includes(searchValue );
-//   })
-
-//   // show result
-//   const resultContainer=$.querySelector("#result-container");
-//   resultContainer.innerHTML="";
-
-//   result.forEach(function(product){
-//     const productElement=$.createElement("div");
-//     productElement.textContent=product.name;
-//     resultContainer.appendChild(productElement);
-//   })
-
-// })
-
 function searchProducts() {
   console.log("clicked");
 
@@ -98,3 +77,4 @@ function searchProducts() {
     }
   }
 }
+//  minoo
