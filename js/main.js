@@ -1,14 +1,15 @@
 let slideIndex = 1;
 let remainingTime = 70000;
+const $=document;
 
 function setTime() {
   if (remainingTime == 0) return;
   let h = Math.floor(remainingTime / 3600);
   let m = Math.floor((remainingTime % 3600) / 60);
   let s = (remainingTime % 3600) % 60;
-  document.querySelector("#hours").innerHTML = h;
-  document.querySelector("#minutes").innerHTML = m;
-  document.querySelector("#seconds").innerHTML = s;
+  $.querySelector("#hours").innerHTML = h;
+  $.querySelector("#minutes").innerHTML = m;
+  $.querySelector("#seconds").innerHTML = s;
 }
 
 setInterval(() => {
@@ -18,8 +19,8 @@ setInterval(() => {
 
 function setSlide(input, index) {
   slideIndex = index;
-  let item = document.querySelector(`#${input}`);
-  let slides = [...document.querySelector(".slides").children];
+  let item = $.querySelector(`#${input}`);
+  let slides = [...$.querySelector(".slides").children];
   slides.forEach((element) => {
     element.classList.remove("active");
   });
@@ -38,14 +39,14 @@ setInterval(() => {
 
 window.addEventListener("resize", function () {
   if (window.innerWidth < 575) {
-    let form = document.getElementById("search-form");
-    let div = document.getElementById("add-searchbar");
+    let form = $.getElementById("search-form");
+    let div = $.getElementById("add-searchbar");
     div.appendChild(form);
   } else {
     if (window.innerWidth > 575) {
-    let form = document.getElementById("search-form");
-    let div = document.getElementById("add-searchbar");
-    let navRight = document.getElementById("nav-right");
+    let form = $.getElementById("search-form");
+    let div = $.getElementById("add-searchbar");
+    let navRight = $.getElementById("nav-right");
 
     div.removeChild(form);
     navRight.appendChild(form)
@@ -57,10 +58,10 @@ window.addEventListener("resize", function () {
 
 
 ///////////////////////////input search///////////////////////
-// const searchInput=$.querySelector("#search-form input")
+const searchInput=$.querySelector("#search-form input")
 const searchIcon=$.querySelector("#search-icon");
 const allProducts = [
-  { id: 1, name: "هدفون", price: 20 },
+  { id: 1, name: "هدفون" ,elem:`<p>minoo</p>`},
   { id: 2, name: "طفلانه", price: 40 },
   { id: 3, name: "هندزفری", price: 87 },
   { id: 4, name: "کفش", price: 876 },
@@ -72,7 +73,9 @@ const allProducts = [
 
 
 
+
 searchIcon.addEventListener("click", function searchProduct(){
+  // console.log("clicked")
   const searchValue=$.querySelector("#search-form input").value;
   const result=allProducts.filter(function(product){
     return product.name.includes(searchValue );
@@ -86,7 +89,7 @@ searchIcon.addEventListener("click", function searchProduct(){
 
   result.forEach(function(product){
     const productElement=$.createElement("div");
-    productElement.textContent=product.id;
+    productElement.textContent=product.elem;
     resultContainer.appendChild(productElement);
   })
 
