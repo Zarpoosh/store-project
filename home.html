@@ -27,8 +27,8 @@
               <a href=""><i class="fas fa-home"></i></a>
               <!-- serach input -->
               <form id="search-form" >
-                <input type="text" placeholder="جستو جو کنید...">
-                <a href="#"><i class="fas fa-search"></i></a>
+                <input oninput="searchProducts()" type="text" placeholder="جستو جو کنید...">
+                <a id="search-icon" href="#"><i class="fas fa-search"></i></a>
               </form>
               <!-- end of serach input -->
               
@@ -44,30 +44,29 @@
         </div>
 
         <div id="add-searchbar" style="width:100%;"></div>
-    </nav>
-        <section class="slider">
-            <div class="slides">
-                <div class="item active" id="slide1">
-                <img src="./images/s1.jpg" alt="">
-                
-            </div>
-                <div class="item" id="slide2">
-                <img src="./images/s2.jpg" alt="">
-                
-            </div>
-                <div class="item" id="slide3">
-                <img src="./images/s3.jpg" alt="">
-                
-            </div>
-            <div class="buttons">
-                <i onclick="setSlide('slide1' , 1)" class="fa-solid fa-circle"></i>
-                <i onclick="setSlide('slide2' , 2)" class="fa-solid fa-circle"></i>
-                <i onclick="setSlide('slide3' , 3)" class="fa-solid fa-circle"></i>
-            </div>
+      </nav>
+      <section class="slider"  >
+          <div class="slides">
+              <div class="item active" id="slide1">
+              <img src="./images/s1.jpg" alt="">
+              
+          </div>
+              <div class="item" id="slide2">
+              <img src="./images/s2.jpg" alt="">
+              
+          </div>
+              <div class="item" id="slide3">
+              <img src="./images/s3.jpg" alt="">
+              
+          </div>
+          <div class="buttons">
+              <i onclick="setSlide('slide1' , 1)" class="fa-solid fa-circle"></i>
+              <i onclick="setSlide('slide2' , 2)" class="fa-solid fa-circle"></i>
+              <i onclick="setSlide('slide3' , 3)" class="fa-solid fa-circle"></i>
+          </div>
 
-        </section>
+      </section>
     </header>
-    
     <main id="main">
     
       <section class="dragble-list">
@@ -489,11 +488,14 @@
          <img src="./images/super-product.jpg" alt="">
         </div>
         </section>
+        <!-- error  -->
+        <p id="error" style="text-align:center"></p>
+        <!-- end of error -->
          <div class="product-list" id="product-list">
         <section class="product-sec-new">
          
             <div class="row">
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+              <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                 <div class="shoping-card">
                   <div class="img-sec">
                       <img src="./images/h5.jpg" alt="">
@@ -525,7 +527,7 @@
                   </div>
                  </div>
               </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+             <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
               <div class="shoping-card">
                 <div class="img-sec">
                     <img src="./images/product14-2 - Copy.png" alt="">
@@ -557,7 +559,7 @@
              </div>
            </div>
            
-           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+           <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
               <div class="shoping-card">
                 <div class="img-sec">
                     <img src="./images/h7.jpg" alt="">
@@ -589,7 +591,7 @@
                </div>
            </div>
            </div>
-           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+           <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
               <div class="shoping-card">
                 <div class="img-sec">
                     <img src="./images/product6 - Copy.png" alt="">
@@ -629,7 +631,7 @@
           <section class="product-sec-new">
            
               <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                   <div class="shoping-card">
                     <div class="img-sec">
                         <img src="./images/product1 - Copy.png" alt="">
@@ -661,7 +663,7 @@
                     </div>
                    </div>
                 </div>
-               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+               <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                 <div class="shoping-card">
                   <div class="img-sec">
                       <img src="./images/product14-2 - Copy.png" alt="">
@@ -693,7 +695,7 @@
                </div>
              </div>
              
-             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+             <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                 <div class="shoping-card">
                   <div class="img-sec">
                       <img src="./images/product12 - Copy.png" alt="">
@@ -725,7 +727,7 @@
                  </div>
              </div>
              </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+             <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                 <div class="shoping-card">
                   <div class="img-sec">
                       <img src="./images/product7 - Copy.png - Copy.png" alt="">

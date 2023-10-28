@@ -1,14 +1,15 @@
 let slideIndex = 1;
 let remainingTime = 70000;
+const $ = document;
 
 function setTime() {
   if (remainingTime == 0) return;
   let h = Math.floor(remainingTime / 3600);
   let m = Math.floor((remainingTime % 3600) / 60);
   let s = (remainingTime % 3600) % 60;
-  document.querySelector("#hours").innerHTML = h;
-  document.querySelector("#minutes").innerHTML = m;
-  document.querySelector("#seconds").innerHTML = s;
+  $.querySelector("#hours").innerHTML = h;
+  $.querySelector("#minutes").innerHTML = m;
+  $.querySelector("#seconds").innerHTML = s;
 }
 
 setInterval(() => {
@@ -18,8 +19,8 @@ setInterval(() => {
 
 function setSlide(input, index) {
   slideIndex = index;
-  let item = document.querySelector(`#${input}`);
-  let slides = [...document.querySelector(".slides").children];
+  let item = $.querySelector(`#${input}`);
+  let slides = [...$.querySelector(".slides").children];
   slides.forEach((element) => {
     element.classList.remove("active");
   });
@@ -38,20 +39,46 @@ setInterval(() => {
 
 window.addEventListener("resize", function () {
   if (window.innerWidth < 575) {
-    let form = document.getElementById("search-form");
-    let div = document.getElementById("add-searchbar");
+    let form = $.getElementById("search-form");
+    let div = $.getElementById("add-searchbar");
     div.appendChild(form);
   } else {
     if (window.innerWidth > 575) {
-    let form = document.getElementById("search-form");
-    let div = document.getElementById("add-searchbar");
-    let navRight = document.getElementById("nav-right");
+      let form = $.getElementById("search-form");
+      let div = $.getElementById("add-searchbar");
+      let navRight = $.getElementById("nav-right");
 
-    div.removeChild(form);
-    navRight.appendChild(form)
-
-}
+      div.removeChild(form);
+      navRight.appendChild(form);
+    }
   }
 });
 
 
+
+/////////////////////////input search///////////////////////
+const searchIcon = $.querySelector("#search-icon");
+function searchProducts() {
+  console.log("clicked");
+
+  const input = $.querySelector("#search-form input").value;
+  const products = $.getElementsByClassName("product");
+  const banner = $.querySelector("#banner");
+  const error = $.querySelector("#error");
+
+  for (var i = 0; i < products.length; i++) {
+    var productName = products[i].textContent;
+
+    if (productName.includes(input)) {
+      products[i].classList.remove("hidden");
+      banner.classList.add("hidden");
+    } else {
+      products[i].classList.add("hidden");
+      error.innerHTML = "محصول پیدا نشد.";
+      banner.classList.remove("hidden");
+    }
+  }
+}
+
+
+// hello
