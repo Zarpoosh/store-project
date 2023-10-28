@@ -55,16 +55,40 @@ window.addEventListener("resize", function () {
 });
 
 
-
-//////////////////////input search///////////////////////
-const searchInput=$.querySelector("#search-form input")
+///////////////////////////input search///////////////////////
+// const searchInput=$.querySelector("#search-form input")
 const searchIcon=$.querySelector("#search-icon");
+const allProducts = [
+  { id: 1, name: "هدفون", price: 20 },
+  { id: 2, name: "طفلانه", price: 40 },
+  { id: 3, name: "هندزفری", price: 87 },
+  { id: 4, name: "کفش", price: 876 },
+  { id: 5, name: "کیف", price: 345 },
+  { id: 6, name: "شلوار شیک", price: 889 },
+  { id: 7, name: "بهترین لباس", price: 889 },
+  { id: 8, name: "بلوس", price: 889 },
+];
 
 
-searchIcon.addEventListener("click", function(){
-  console.log("clicked")
+
+searchIcon.addEventListener("click", function searchProduct(){
+  const searchValue=$.querySelector("#search-form input").value;
+  const result=allProducts.filter(function(product){
+    return product.name.includes(searchValue );
+  })
+
+
+
+  // show result
+  const resultContainer=$.querySelector("#result-container");
+  resultContainer.innerHTML="";
+
+  result.forEach(function(product){
+    const productElement=$.createElement("div");
+    productElement.textContent=product.id;
+    resultContainer.appendChild(productElement);
+  })
+
+  
+  
 })
-
-searchInput.addEventListener("keydown",function (event) {
-    console.log(event.value)
-} )
