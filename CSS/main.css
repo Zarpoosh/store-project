@@ -16,3 +16,8 @@ a {
 .hidden {
   display: none;
 }
+
+.overflow{
+  overflow: scroll;
+  flex-wrap: nowrap;
+}
