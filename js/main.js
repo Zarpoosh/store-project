@@ -43,27 +43,35 @@ console.log(containerProduct);
 const  dataProducts = [
     {id: 0, imgSrc: './images/product10.png', productName: 'Clothes 1',category : "shoes" ,price: '30,0', star: 3 , like:true , off : false , bascket : false},
     {id: 1, imgSrc: './images/product12.png', productName: 'Clothes 2',category : "shoes" ,price: '25,0', star: 3 , like:true , off : false , bascket : false},
-    {id: 2, imgSrc: './images/product3.png', productName: 'Clothes 3',category : "shoes" ,price: '35,0', star: 3 , like:true , off : false , bascket : false},
+    {id: 2, imgSrc: './images/product3.png', productName: 'Clothes 3',category : "plant" ,price: '35,0', star: 3 , like:true , off : false , bascket : false},
     {id: 3, imgSrc: './images/product3.png', productName: 'Clothes 4',category : "shoes" ,price: '22,0', star: 3 , like:true , off : false , bascket : false},
     {id: 4, imgSrc: './images/product3.png', productName: 'Clothes 5',category : "shoes" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
     {id: 5, imgSrc: './images/product3.png', productName: 'Clothes 6',category : "shoes" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
-    {id: 6, imgSrc: './images/product3.png', productName: 'Clothes 7',category : "shoes" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
+    {id: 6, imgSrc: './images/product3.png', productName: 'Clothes 7',category : "plant" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
     {id: 7, imgSrc: './images/product3.png', productName: 'Clothes 8',category : "shoes" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
     {id: 8, imgSrc: './images/product3.png', productName: 'Clothes 9',category : "shoes" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
     {id: 9, imgSrc: './images/product3.png', productName: 'Clothes 10', price: '40,0',  star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     {id: 10, imgSrc: './images/product6.png', productName: 'Clothes 11', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     {id: 11, imgSrc: './images/product6.png', productName: 'Clothes 12', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
-    {id: 12, imgSrc: './images/product6.png', productName: 'Clothes 13', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
+    {id: 12, imgSrc: './images/product6.png', productName: 'Clothes 13', price: '40,0', star: 3 , category : "plant" , like:true , off : false , bascket : false},
     {id: 13, imgSrc: './images/product6.png', productName: 'Clothes 14', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     {id: 14, imgSrc: './images/product6.png', productName: 'Clothes 15', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     {id: 15, imgSrc: './images/product6.png', productName: 'Clothes 16', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     {id: 16, imgSrc: './images/product6.png', productName: 'Clothes 17', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     {id: 17, imgSrc: './images/product6.png', productName: 'Clothes 18', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
     ]
-    // ==========> not fix for  data  Products <========== \\
-    for(let i = 0; i < dataProducts.length; i++) {
-      console.log(i, dataProducts[i]);
-      let product = dataProducts[i];
+    // ==========> filter data Products <========== \\
+    let dataPlanet = dataProducts.filter((item) => {
+        if(item.category === "plant"){
+          console.log(item);
+          return item
+        }
+      })
+      // ===========  view data products  <========== \\
+    for(let i = 0; i < dataPlanet.length; i++) {
+      console.log(i, dataPlanet[i]);
+      let product = dataPlanet[i];
+     
       console.log(product.id);
       console.log(containerProduct);
       // Todo  insertAdjacentHTML  replace code Html  \\
