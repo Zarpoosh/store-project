@@ -91,7 +91,7 @@ const  dataProducts = [
                       </div>
                   </div>
                   <h2>${product.productName}</h2>
-                  <h2>${product.category}</h2>
+                  <h5>${product.category}</h5>
                   <div class="buttons">
                       <div class="right">
                           <span class="price">${product.price}</span>
