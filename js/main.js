@@ -106,10 +106,12 @@ function searchProducts() {
       banner.classList.add("hidden");
     } else {
       products[i].classList.add("hidden");
-      error.innerHTML = "محصول پیدا نشد.";
       banner.classList.remove("hidden");
     }
-  }
+    if (productName.includes(input)) {
+      error.innerHTML = "محصول پیدا نشد.";
+
+    } 
 }
 function handlerDataProducts(category){
 
@@ -148,7 +150,7 @@ function handlerDataProducts(category){
       // Todo  insertAdjacentHTML  replace code Html  \\
       containerProduct.insertAdjacentHTML('afterbegin',`
    <div class="product  col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="shoping-card">
+                <div class="shoping-card"sdsfd>
                   <div class="img-sec">
                       <img src=${product.imgSrc} alt="">
                       <span class="hot-offer ">پیشنهاد ویژه</span>
