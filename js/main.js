@@ -215,3 +215,12 @@ function searchProducts() {
     // } 
 }
 }
+
+
+
+////////////////categories/////////////////////
+const categoryTag=$.querySelector(".category-tag")
+console.log(categoryTag)
+categoryTag.addEventListener("click" , function(){
+  console.log("clicked")
+})
