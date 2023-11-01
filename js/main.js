@@ -114,7 +114,7 @@ const  dataProducts = [
                   <i class="fa-solid fa-star"></i>
                 </div>
               </div>
-              <h2>${product.productName}</h2>
+              <h4>${product.productName}</h4>
               <h5>${product.category}</h5>
               <div class="buttons">
                 <div class="right">
