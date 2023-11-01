@@ -113,6 +113,7 @@ function searchProducts() {
 
     } 
 }
+}
 function handlerDataProducts(category){
 
 }
