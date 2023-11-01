@@ -48,7 +48,7 @@ const  dataProducts = [
   {id: 12, imgSrc: './images/product10.png', productName: 'شلوار لی ', price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
   {id: 0,  imgSrc: './images/product2.png',  productName: 'مانتو پاییزی'   ,category : "زنانه" ,price: '30,0', star: 3 , like:true , off : false , bascket : false},
   
-  {id: 6,  imgSrc: './images/product4.png',  productName: 'تیشرت',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 6,  imgSrc: './images/product4.png',  productName: 'پالتو مردانه',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
   {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی', price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
@@ -114,7 +114,7 @@ const  dataProducts = [
                   <i class="fa-solid fa-star"></i>
                 </div>
               </div>
-              <h2>${product.productName}</h2>
+              <h3>${product.productName}</h3>
               <h5>${product.category}</h5>
               <div class="buttons">
                 <div class="right">
@@ -152,21 +152,42 @@ const  dataProducts = [
 
 
   // ////////////////////  new js  ///////////////////////////
-window.addEventListener("resize", function () {
-  if (window.innerWidth < 575) {
-    let form = $.getElementById("search-form");
-    let div = $.getElementById("add-searchbar");
-    div.appendChild(form);
-  } else {
-    if (window.innerWidth > 575) {
-      let form = $.getElementById("search-form");
-      let div = $.getElementById("add-searchbar");
-      let navRight = $.getElementById("nav-right");
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth < 575) {
+//     let form = $.getElementById("search-form");
+//     let div = $.getElementById("add-searchbar");
+//     div.appendChild(form);
+//   } else {
+//     if (window.innerWidth > 575) {
+//       let form = $.getElementById("search-form");
+//       let div = $.getElementById("add-searchbar");
+//       let navRight = $.getElementById("nav-right");
 
-      div.removeChild(form);
-      navRight.appendChild(form);
-    }
+//       div.removeChild(form);
+//       navRight.appendChild(form);
+//     }
+//   }
+// });
+
+function handleSearchFormPosition() {
+  const form = $.getElementById("search-form");
+  const div = $.getElementById("add-searchbar");
+  const navRight = $.getElementById("nav-right");
+
+  if (window.innerWidth < 575) {
+    div.append(form);
+
+  } else {
+    navRight.append(form);
   }
+}
+
+// Initial positioning of search form on page load
+handleSearchFormPosition();
+
+// Handle search form positioning on window resize
+window.addEventListener("resize", function () {
+  handleSearchFormPosition();
 });
 
 
@@ -178,24 +199,19 @@ function searchProducts() {
 
   const input = $.querySelector("#search-form input").value;
   const products = $.getElementsByClassName("product");
-  const banner = $.querySelector("#banner");
-  const error = $.querySelector("#error");
+// const titleCategory=$.querySelectorAll(".category-style")
 
   for (let i = 0; i < products.length; i++) {
     var productName = products[i].textContent;
 
     if (productName.includes(input)) {
       products[i].classList.remove("hidden");
-      banner.classList.add("hidden");
     } else {
       products[i].classList.add("hidden");
-      banner.classList.remove("hidden");
     }
-    if (productName.includes(input)) {
-      error.innerHTML = "محصول پیدا نشد.";
+    // if (productName.includes(input)) {
+    //   error.innerHTML = "محصول پیدا نشد.";
 
-    } 
+    // } 
 }
-}
-function handlerDataProducts(category){
 }
