@@ -40,27 +40,41 @@ setInterval(() => {
 
 //?============= dataProducts =============\\
 const  dataProducts = [
+  {id: 11, imgSrc: './images/product9.png',  productName: 'Clothes 12', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
   {id: 1,  imgSrc: './images/product12.png', productName: 'تیشرت مشکی'  ,category : "زنانه" ,price: '25,0', star: 3 , like:true , off : false , bascket : false},
   {id: 2,  imgSrc: './images/P6.jpg',        productName: 'لباس محلی'   ,category : "زنانه" ,price: '35,0', star: 3 , like:true , off : false , bascket : false},
   {id: 3,  imgSrc: './images/P8.jpg',        productName: 'دامن مجلسی'  ,category : "زنانه" ,price: '22,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 4,  imgSrc: './images/product1.png',  productName: 'Clothes 5' ,category : "shoes" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 0,  imgSrc: './images/product2.png',  productName: 'مانتو پاییزی'   ,category : "زنانه" ,price: '30,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 5,  imgSrc: './images/product3.png',  productName: 'Clothes 6'  ,category : "shoes" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 6,  imgSrc: './images/product4.png',  productName: 'تیشرت',      category : "plant" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 7,  imgSrc: './images/product5.png',  productName: 'Clothes 8',category : "shoes" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 8,  imgSrc: './images/product6.png',  productName: 'Clothes 9',category : "shoes" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 9,  imgSrc: './images/product7.png',  productName: 'Clothes 10', price: '40,0',  star: 3 , category : "shoes" , like:true , off : false , bascket : false},
   {id: 10, imgSrc: './images/product8.png',  productName: 'کیف مجلسی', price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
-  {id: 11, imgSrc: './images/product9.png',  productName: 'Clothes 12', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
   {id: 12, imgSrc: './images/product10.png', productName: 'شلوار لی ', price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
-  {id: 13, imgSrc: './images/product11.png', productName: 'Clothes 14', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
-  {id: 14, imgSrc: './images/product12.png', productName: 'Clothes 15', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
-  {id: 15, imgSrc: './images/product13.png', productName: 'Clothes 16', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
-  {id: 16, imgSrc: './images/product14.png', productName: 'Clothes 17', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
-  {id: 17, imgSrc: './images/product15.png', productName: 'Clothes 18', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
+  {id: 0,  imgSrc: './images/product2.png',  productName: 'مانتو پاییزی'   ,category : "زنانه" ,price: '30,0', star: 3 , like:true , off : false , bascket : false},
+  
+  {id: 6,  imgSrc: './images/product4.png',  productName: 'تیشرت',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی', price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 4,  imgSrc: './images/product1.png',  productName: 'کاپشن کوهنوردی' ,category : "مردانه" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 13, imgSrc: './images/product11.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 16, imgSrc: './images/product14.png', productName: 'ست لی', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+ 
+  {id: 5,  imgSrc: './images/product3.png',  productName: 'تیشرت مشکی'  ,category : "دخترانه" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 25, imgSrc: './images/P9.jpg', productName: 'کت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+  {id: 14, imgSrc: './images/product12.png', productName: 'تیشرت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+  {id: 15, imgSrc: './images/product13.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+  {id: 26, imgSrc: './images/P12.jpg', productName: 'شلوار کتان', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+
+  {id: 18, imgSrc: './images/h1.jpg', productName: 'هنسفری بلوتوثی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 19, imgSrc: './images/h2.jpg', productName: 'هنسفری', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 20, imgSrc: './images/h3.jpg', productName: 'هنسفری سیمی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 21, imgSrc: './images/h4.jpg', productName: 'هنسفری', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 22, imgSrc: './images/h5.jpg', productName: 'هدفون', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 23, imgSrc: './images/h6.jpg', productName: 'هدفون بلوتوثی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 24, imgSrc: './images/super-product.jpg', productName: 'هدفون بی سیم', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+
   ]
 
-  
+  const containerProduct = $.querySelectorAll('.overflow');
+
   /**
    * Filters the given data based on the specified category.
    *
@@ -79,23 +93,15 @@ const  dataProducts = [
    * @param {Array} dataFilter - The data filter to generate products from.
    */
   function generateProducts(dataFilter) {
-    const container = $.querySelector(".product-sec-new");
-    
-    // Iterate over each unique category in the filtered data
-    const categories = Array.from(new Set(dataFilter.map(item => item.category)));
-    for (let category of categories) {
-      // Create a new div element with the "overflow" class for each category
-      let div = $.createElement('div');
-      div.classList.add('row', 'overflow');
-      container.appendChild(div);
-  
-      // Filter the data based on the current category
-      const categoryFilter = dataFilter.filter(item => item.category === category);
-      for (let i = 0; i < categoryFilter.length; i++) {
-        let product = categoryFilter[i];
-  
+    for (let i = 0; i < containerProduct.length; i++) {
+      const container = containerProduct[i];
+      const categoryFilter = filteredProducts(dataFilter, container.dataset.category);
+      
+      for (let j = 0; j < categoryFilter.length; j++) {
+        let product = categoryFilter[j];
+        
         // Append the product HTML to the corresponding category div
-        div.insertAdjacentHTML('beforeend', `
+        container.insertAdjacentHTML('beforeend', `
           <div class="product col-lg-3 col-sm-4 col-xs-12">
             <div class="shoping-card">
               <div class="img-sec">
@@ -132,16 +138,15 @@ const  dataProducts = [
     }
   }
   
-  // Filter the data for a specific category
-  const filterCategory = "زنانه";
-
-  const dataFilter = filteredProducts(dataProducts, filterCategory);
-  console.log(dataFilter)
-  // Generate the container divs with the products for each category
-  generateProducts(dataFilter);
-  generateProducts(dataFilter);
-
-
+  // Filter the data for each category div
+  for (let i = 0; i < containerProduct.length; i++) {
+    const container = containerProduct[i];
+    const filterCategory = container.dataset.category;
+    const dataFilter = filteredProducts(dataProducts, filterCategory);
+  
+    // Generate the products for each category div
+    generateProducts(dataFilter);
+  }
 
 
 
