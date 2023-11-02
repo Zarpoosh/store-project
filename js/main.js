@@ -1,6 +1,6 @@
 let slideIndex = 1;
 let remainingTime = 70000;
-const $ = document;
+const $= document;
 
 // function setTime() {
 //   if (remainingTime == 0) return;
@@ -170,9 +170,9 @@ const  dataProducts = [
 // });
 
 function handleSearchFormPosition() {
-  const form = $.getElementById("search-form");
-  const div = $.getElementById("add-searchbar");
-  const navRight = $.getElementById("nav-right");
+  const form = $.getElementById("#search-form");
+  const div = $.getElementById("#add-searchbar");
+  const navRight = $.getElementById("#nav-right");
 
   if (window.innerWidth < 575) {
     div.append(form);
@@ -183,7 +183,7 @@ function handleSearchFormPosition() {
 }
 
 // Initial positioning of search form on page load
-handleSearchFormPosition();
+// handleSearchFormPosition();
 
 // Handle search form positioning on window resize
 window.addEventListener("resize", function () {
@@ -219,8 +219,22 @@ function searchProducts() {
 
 
 ////////////////categories/////////////////////
-const categoryTag=$.querySelector(".category-tag")
-console.log(categoryTag)
-categoryTag.addEventListener("click" , function(){
-  console.log("clicked")
+const woman=$.querySelector(".woman")
+const man=$.querySelector(".man")
+const girl=$.querySelector(".girl")
+const hedphone=$.querySelector(".hedphone")
+
+
+
+woman.addEventListener("click" , function(){
+  
+})
+man.addEventListener("click" , function(){
+  
+})
+girl.addEventListener("click" , function(){
+  
+})
+hedphone.addEventListener("click" , function(){
+  
 })
