@@ -219,22 +219,15 @@ function searchProducts() {
 
 
 ////////////////categories/////////////////////
-const woman=$.querySelector(".woman")
-const man=$.querySelector(".man")
-const girl=$.querySelector(".girl")
-const hedphone=$.querySelector(".hedphone")
-
-
-
-woman.addEventListener("click" , function(){
-  
-})
-man.addEventListener("click" , function(){
-  
-})
-girl.addEventListener("click" , function(){
-  
-})
-hedphone.addEventListener("click" , function(){
-  
-})
+function showProducts(cat) {
+  var productsCategory = $.getElementsByClassName('overflow');
+  var title=$.getElementsByClassName("category-style")
+  console.log(productsCategory)
+  for (var i = 0; i < productsCategory.length; i++) {
+    if (productsCategory[i].classList.contains(cat)) {
+      productsCategory[i].style.display = "flex";
+    } else {
+      productsCategory[i].style.display = "none";
+    }
+  }
+}
