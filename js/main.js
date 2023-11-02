@@ -195,11 +195,10 @@ window.addEventListener("resize", function () {
 /////////////////////////input search///////////////////////
 const searchIcon = $.querySelector("#search-icon");
 function searchProducts() {
-  console.log("clicked");
+  // console.log("clicked");
 
   const input = $.querySelector("#search-form input").value;
   const products = $.getElementsByClassName("product");
-// const titleCategory=$.querySelectorAll(".category-style")
 
   for (let i = 0; i < products.length; i++) {
     var productName = products[i].textContent;
@@ -218,16 +217,20 @@ function searchProducts() {
 
 
 
-////////////////categories/////////////////////
+////////////////categories btn/////////////////////
 function showProducts(cat) {
   var productsCategory = $.getElementsByClassName('overflow');
   var title=$.getElementsByClassName("category-style")
-  console.log(productsCategory)
-  for (var i = 0; i < productsCategory.length; i++) {
-    if (productsCategory[i].classList.contains(cat)) {
+  // console.log(productsCategory)
+  for (var i = 0; i < productsCategory , title.length; i++) {
+    if (productsCategory[i], title[i].classList.contains(cat)) {
       productsCategory[i].style.display = "flex";
+      title[i].style.display = "flex";
+
     } else {
       productsCategory[i].style.display = "none";
+      title[i].style.display = "none";
+
     }
   }
 }

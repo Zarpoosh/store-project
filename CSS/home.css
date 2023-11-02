@@ -639,13 +639,10 @@ h5{
   margin-right: 1rem;
   margin: 2rem;
 }
-#tag-spans span{
+#tag-btn button{
   margin-right:1rem;
-  border:2px solid gray;
-  border-radius:10px;
+  border:1px solid gray;
+  border-radius:5px;
   padding:5px;
-  display:felx;
-  text-align:center;
-  justify-content:center;
   cursor:pointer;
 }
