@@ -72,10 +72,10 @@
     
       <section class="dragble-list">
         <div id="tag-spans" class="row text-center flex">
-          <span class="woman">زنانه</span>
-          <span class="man">مردانه</span>
-          <span class="girl">دخترانه</span>
-          <span class="hedphone">هدفون</span>
+          <button onclick="showProducts('woman')">زنانه</button>
+          <button onclick="showProducts('man')" class="man">مردانه</button>
+          <button onclick="showProducts('girl')">دخترانه</button>
+          <button onclick="showProducts('hedphone')">هدفون</button>
         </div>
         <!-- <div class="title">
           <span></span>
@@ -488,14 +488,18 @@
     
 
   <section class="product-sec-new">   
-    <h2 class="category-style">زنانه</h2>
-    <div class="overflow row" data-category="زنانه"></div>
-    <h2 class="category-style">مردانه</h2>
-    <div class="overflow row" data-category="مردانه"></div>
-    <h2 class="category-style">دخترانه</h2>
-    <div class="overflow row" data-category="دخترانه"></div>
-    <h2 class="category-style">هدفون</h2>
-    <div class="overflow row" data-category="هدفون"></div>
+    <h2 class="category-style woman">زنانه</h2>
+    <div class="overflow row woman" data-category="زنانه"></div>
+
+    <h2 class="category-style man">مردانه</h2>
+    <div class="overflow row man" data-category="مردانه"></div>
+
+    <h2 class="category-style girl">دخترانه</h2>
+    <div class="overflow row girl" data-category="دخترانه"></div>
+
+    <h2 class="category-style hedphone">هدفون</h2>
+    <div class="overflow row hedphone" data-category="هدفون"></div>
+
 
   </section>
   <section id="banner">
