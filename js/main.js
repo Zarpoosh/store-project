@@ -50,12 +50,15 @@ const  dataProducts = [
   
   {id: 6,  imgSrc: './images/product4.png',  productName: 'پالتو مردانه',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
   {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی', price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
-  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 4,  imgSrc: './images/product1.png',  productName: 'کاپشن کوهنوردی' ,category : "مردانه" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 13, imgSrc: './images/product11.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 16, imgSrc: './images/product14.png', productName: 'ست لی', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+
+  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 27,  imgSrc: './images/shoes2.jpg',  productName: 'کفش ورزشی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 28,  imgSrc: './images/shoes.jpg',  productName: 'کفش مجلسی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
  
   {id: 5,  imgSrc: './images/product3.png',  productName: 'تیشرت مشکی'  ,category : "دخترانه" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
   {id: 25, imgSrc: './images/P9.jpg', productName: 'کت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
