@@ -75,7 +75,173 @@ const  dataProducts = [
 
   const containerProduct = $.querySelectorAll('.overflow');
 
-  /**
+  
+  
+  // Filter the data for each category div
+  for (let i = 0; i < containerProduct.length; i++) {
+    const container = containerProduct[i];
+    const filterCategory = container.dataset.category;
+    
+    const dataFilter = filteredProducts(dataProducts, filterCategory);
+    console.log(dataFilter);
+    // Generate the products for each category div
+    generateProducts(dataFilter);
+  }
+
+
+
+
+  // ////////////////////  new js  ///////////////////////////
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth < 575) {
+//     let form = $.getElementById("search-form");
+//     let div = $.getElementById("add-searchbar");
+//     div.appendChild(form);
+//   } else {
+//     if (window.innerWidth > 575) {
+//       let form = $.getElementById("search-form");
+//       let div = $.getElementById("add-searchbar");
+//       let navRight = $.getElementById("nav-right");
+
+//       div.removeChild(form);
+//       navRight.appendChild(form);
+//     }
+//   }
+// });
+
+function handleSearchFormPosition() {
+  const form = $.getElementById("search-form");
+  const div = $.getElementById("add-searchbar");
+  const navRight = $.getElementById("nav-right");
+
+  if (window.innerWidth < 575) {
+    div.append(form);
+
+  } else {
+    navRight.append(form);
+  }
+}
+
+// Initial positioning of search form on page load
+handleSearchFormPosition();
+
+// Handle search form positioning on window resize
+window.addEventListener("resize", function () {
+  handleSearchFormPosition();
+});
+
+
+
+/////////////////////////input search///////////////////////
+const searchIcon = $.querySelector("#search-icon");
+function searchProducts() {
+  
+  var productsContainerAll =$.querySelector(".product-sec-new");
+  console.log(productsContainerAll);
+  const input = $.querySelector("#search-form input").value;
+  const products = $.getElementsByClassName("product");
+  console.log(products);
+// const titleCategory=$.querySelectorAll(".category-style")
+let filterSearch=dataProducts.filter( (product)=>{
+   return product.productName === input
+  })
+console.log(filterSearch);
+if(filterSearch.length){
+  console.log("search okey");
+  for(i=0; i < products.length ; i++){
+  products[i].classList.add("hidden");}
+  for(i=0 ; i < filterSearch.length ; i++){
+  productsContainerAll.insertAdjacentHTML('beforeend', `
+          <div class="product col-lg-3 col-sm-4 col-xs-12">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="${filterSearch[i].imgSrc}" alt="">
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <h3>${filterSearch[i].productName}</h3>
+              <h5>${filterSearch[i].category}</h5>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">${filterSearch[i].price}</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علاقه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
+}
+    
+} else {
+  const containerProduct = $.querySelectorAll('.overflow');
+
+  for(i=0; i < products.length ; i++){
+    products[i].classList.remove("hidden");}
+  
+  // Filter the data for each category div
+  for (let i = 0; i < containerProduct.length; i++) {
+    const container = containerProduct[i];
+    const filterCategory = container.dataset.category;
+    
+    const dataFilter = filteredProducts(dataProducts, filterCategory);
+    console.log(dataFilter);
+    // Generate the products for each category div
+    generateProducts(dataFilter);
+  }
+}
+//   for (let i = 0; i < dataProducts.length; i++) {
+//     var productName = dataProducts[i].productName;
+// console.log(productName);
+//     if (productName.includes(input)) {
+//       products[i].classList.remove("hidden");
+//     } else {
+//       products[i].classList.add("hidden");
+//     }
+//     // if (productName.includes(input)) {
+//     //   error.innerHTML = "محصول پیدا نشد.";
+
+//     // } 
+// }
+ }
+ function showProducts(cat) {
+  var productsCategory = $.getElementsByClassName('overflow');
+  var title=$.getElementsByClassName("category-style")
+  // console.log(productsCategory)
+  for (var i = 0; i < productsCategory , title.length; i++) {
+    if (productsCategory[i], title[i].classList.contains(cat)) {
+      productsCategory[i].style.display = "flex";
+      title[i].style.display = "flex";
+
+    } else {
+      productsCategory[i].style.display = "none";
+      title[i].style.display = "none";
+
+    }
+  }
+}
+
+
+////////////////categories/////////////////////
+const categoryTag=$.querySelectorAll(".category-tag");
+console.log(categoryTag)
+categoryTag.addEventListener("click" , function(){
+  console.log("clicked")
+})
+/**
    * Filters the given data based on the specified category.
    *
    * @param {Array} data - The data to be filtered.
@@ -137,147 +303,3 @@ const  dataProducts = [
       }
     }
   }
-  
-  // Filter the data for each category div
-  for (let i = 0; i < containerProduct.length; i++) {
-    const container = containerProduct[i];
-    const filterCategory = container.dataset.category;
-    const dataFilter = filteredProducts(dataProducts, filterCategory);
-  
-    // Generate the products for each category div
-    generateProducts(dataFilter);
-  }
-
-
-
-
-  // ////////////////////  new js  ///////////////////////////
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth < 575) {
-//     let form = $.getElementById("search-form");
-//     let div = $.getElementById("add-searchbar");
-//     div.appendChild(form);
-//   } else {
-//     if (window.innerWidth > 575) {
-//       let form = $.getElementById("search-form");
-//       let div = $.getElementById("add-searchbar");
-//       let navRight = $.getElementById("nav-right");
-
-//       div.removeChild(form);
-//       navRight.appendChild(form);
-//     }
-//   }
-// });
-
-function handleSearchFormPosition() {
-  const form = $.getElementById("search-form");
-  const div = $.getElementById("add-searchbar");
-  const navRight = $.getElementById("nav-right");
-
-  if (window.innerWidth < 575) {
-    div.append(form);
-
-  } else {
-    navRight.append(form);
-  }
-}
-
-// Initial positioning of search form on page load
-handleSearchFormPosition();
-
-// Handle search form positioning on window resize
-window.addEventListener("resize", function () {
-  handleSearchFormPosition();
-});
-
-
-
-/////////////////////////input search///////////////////////
-const searchIcon = $.querySelector("#search-icon");
-function searchProducts() {
-  
-  var productsContainerAll;
-  console.log(productsContainerAll);
-  const input = $.querySelector("#search-form input").value;
-  const products = $.getElementsByClassName("product");
-// const titleCategory=$.querySelectorAll(".category-style")
-let filterSearch=dataProducts.filter( (product)=>{
-   return product.productName === input
-  })
-console.log(filterSearch);
-if(filterSearch.length){
-  console.log("search okey");
-  productsContainerAll.innerHTML="";
-  for(i=0 ; i < filterSearch.length ; i++){
-  productsContainerAll.insertAdjacentHTML('beforeend', `
-          <div class="product col-lg-3 col-sm-4 col-xs-12">
-            <div class="shoping-card">
-              <div class="img-sec">
-                <img src="${filterSearch[i].imgSrc}" alt="">
-                <span class="hot-offer">پیشنهاد ویژه</span>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-              </div>
-              <h3>${filterSearch[i].productName}</h3>
-              <h5>${filterSearch[i].category}</h5>
-              <div class="buttons">
-                <div class="right">
-                  <span class="price">${filterSearch[i].price}</span>
-                </div>
-                <div class="left">
-                  <div class="extend-btn">
-                    <a class="b-text" href="">علاقه</a>
-                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
-                  </div>
-                  <div class="extend-btn">
-                    <a class="b-text" href="">خرید</a>
-                    <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `);
-}
-    
-} else {
-  console.log("clicked");
-  generateProducts(dataFilter)
-}
-//   for (let i = 0; i < dataProducts.length; i++) {
-//     var productName = dataProducts[i].productName;
-// console.log(productName);
-//     if (productName.includes(input)) {
-//       products[i].classList.remove("hidden");
-//     } else {
-//       products[i].classList.add("hidden");
-//     }
-//     // if (productName.includes(input)) {
-//     //   error.innerHTML = "محصول پیدا نشد.";
-
-//     // } 
-// }
- }
-function showProducts(category) {
-  var products = document.querySelectorAll('.product-sec-new');
-  console.log(products)
-  for (var i = 0; i < products.length; i++) {
-    if (products[i].classList.contains(category)) {
-      products[i].style.display = "block";
-    } else {
-      products[i].style.display = "none";
-    }
-  }
-}
-
-
-////////////////categories/////////////////////
-const categoryTag=$.querySelectorAll(".category-tag");
-console.log(categoryTag)
-categoryTag.addEventListener("click" , function(){
-  console.log("clicked")
-})
