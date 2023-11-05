@@ -1,6 +1,6 @@
 let slideIndex = 1;
 let remainingTime = 70000;
-const $= document;
+const $ = document;
 
 // function setTime() {
 //   if (remainingTime == 0) return;
@@ -50,15 +50,12 @@ const  dataProducts = [
   
   {id: 6,  imgSrc: './images/product4.png',  productName: 'پالتو مردانه',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
   {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی', price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 4,  imgSrc: './images/product1.png',  productName: 'کاپشن کوهنوردی' ,category : "مردانه" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 13, imgSrc: './images/product11.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 16, imgSrc: './images/product14.png', productName: 'ست لی', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
-
-  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 27,  imgSrc: './images/shoes2.jpg',  productName: 'کفش ورزشی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 28,  imgSrc: './images/shoes.jpg',  productName: 'کفش مجلسی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
  
   {id: 5,  imgSrc: './images/product3.png',  productName: 'تیشرت مشکی'  ,category : "دخترانه" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
   {id: 25, imgSrc: './images/P9.jpg', productName: 'کت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
@@ -173,9 +170,9 @@ const  dataProducts = [
 // });
 
 function handleSearchFormPosition() {
-  const form = $.getElementById("#search-form");
-  const div = $.getElementById("#add-searchbar");
-  const navRight = $.getElementById("#nav-right");
+  const form = $.getElementById("search-form");
+  const div = $.getElementById("add-searchbar");
+  const navRight = $.getElementById("nav-right");
 
   if (window.innerWidth < 575) {
     div.append(form);
@@ -186,7 +183,7 @@ function handleSearchFormPosition() {
 }
 
 // Initial positioning of search form on page load
-// handleSearchFormPosition();
+handleSearchFormPosition();
 
 // Handle search form positioning on window resize
 window.addEventListener("resize", function () {
@@ -198,42 +195,89 @@ window.addEventListener("resize", function () {
 /////////////////////////input search///////////////////////
 const searchIcon = $.querySelector("#search-icon");
 function searchProducts() {
-  // console.log("clicked");
-
+  
+  var productsContainerAll;
+  console.log(productsContainerAll);
   const input = $.querySelector("#search-form input").value;
   const products = $.getElementsByClassName("product");
-
-  for (let i = 0; i < products.length; i++) {
-    var productName = products[i].textContent;
-
-    if (productName.includes(input)) {
-      products[i].classList.remove("hidden");
-    } else {
-      products[i].classList.add("hidden");
-    }
-    // if (productName.includes(input)) {
-    //   error.innerHTML = "محصول پیدا نشد.";
-
-    // } 
+// const titleCategory=$.querySelectorAll(".category-style")
+let filterSearch=dataProducts.filter( (product)=>{
+   return product.productName === input
+  })
+console.log(filterSearch);
+if(filterSearch.length){
+  console.log("search okey");
+  productsContainerAll.innerHTML="";
+  for(i=0 ; i < filterSearch.length ; i++){
+  productsContainerAll.insertAdjacentHTML('beforeend', `
+          <div class="product col-lg-3 col-sm-4 col-xs-12">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="${filterSearch[i].imgSrc}" alt="">
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <h3>${filterSearch[i].productName}</h3>
+              <h5>${filterSearch[i].category}</h5>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">${filterSearch[i].price}</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علاقه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
 }
+    
+} else {
+  console.log("clicked");
+  generateProducts(dataFilter)
 }
+//   for (let i = 0; i < dataProducts.length; i++) {
+//     var productName = dataProducts[i].productName;
+// console.log(productName);
+//     if (productName.includes(input)) {
+//       products[i].classList.remove("hidden");
+//     } else {
+//       products[i].classList.add("hidden");
+//     }
+//     // if (productName.includes(input)) {
+//     //   error.innerHTML = "محصول پیدا نشد.";
 
-
-
-////////////////categories btn/////////////////////
-function showProducts(cat) {
-  var productsCategory = $.getElementsByClassName('overflow');
-  var title=$.getElementsByClassName("category-style")
-  // console.log(productsCategory)
-  for (var i = 0; i < productsCategory , title.length; i++) {
-    if (productsCategory[i], title[i].classList.contains(cat)) {
-      productsCategory[i].style.display = "flex";
-      title[i].style.display = "flex";
-
+//     // } 
+// }
+ }
+function showProducts(category) {
+  var products = document.querySelectorAll('.product-sec-new');
+  console.log(products)
+  for (var i = 0; i < products.length; i++) {
+    if (products[i].classList.contains(category)) {
+      products[i].style.display = "block";
     } else {
-      productsCategory[i].style.display = "none";
-      title[i].style.display = "none";
-
+      products[i].style.display = "none";
     }
   }
 }
+
+
+////////////////categories/////////////////////
+const categoryTag=$.querySelectorAll(".category-tag");
+console.log(categoryTag)
+categoryTag.addEventListener("click" , function(){
+  console.log("clicked")
+})
