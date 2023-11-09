@@ -27,9 +27,9 @@
               <a href=""><i class="fas fa-shopping-cart"></i></a>
               <a href=""><i class="fas fa-home"></i></a>
               <!-- serach input -->
-              <form id="search-form" >
+              <form class="search-form" >
                 <input oninput="searchProducts()" type="text" placeholder="جستو جو کنید...">
-                <button id="search-icon" href="#"><i class="fas fa-search"></i></button>
+                <button class="search-icon" href="#"><i class="fas fa-search"></i></button>
               </form>
               <!-- end of serach input -->
               
@@ -44,7 +44,14 @@
           </div>
         </div>
 
-        <div id="add-searchbar" style="width:100%;"></div>
+        <div id="add-searchbar" style="width:100%;">
+          <!-- serach input -->
+          <form class="search-form" >
+            <input oninput="searchProducts()" type="text" placeholder="جستو جو کنید...">
+            <button class="search-icon" href="#"><i class="fas fa-search"></i></button>
+          </form>
+          <!-- end of serach input -->
+        </div>
       </nav>
       <section class="slider"  >
           <div class="slides">

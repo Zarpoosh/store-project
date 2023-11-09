@@ -110,15 +110,16 @@ const  dataProducts = [
 // });
 
 function handleSearchFormPosition() {
-  const form = $.getElementById("search-form");
+  const form = $.querySelector(".search-form");
   const div = $.getElementById("add-searchbar");
   const navRight = $.getElementById("nav-right");
 
   if (window.innerWidth < 575) {
-    div.append(form);
-
+    form.classList.add("hidden");
+    div.classList.remove("hidden");
   } else {
-    navRight.append(form);
+    form.classList.remove("hidden");
+    div.classList.add("hidden")
   }
 }
 
@@ -133,12 +134,12 @@ window.addEventListener("resize", function () {
 
 
 /////////////////////////input search///////////////////////
-const searchIcon = $.querySelector("#search-icon");
+const searchIcon = $.querySelector(".search-icon");
 function searchProducts() {
   
   var productsContainerAll =$.querySelector(".product-sec-new");
   console.log(productsContainerAll);
-  const input = $.querySelector("#search-form input").value;
+  const input = $.querySelector(".search-form input").value;
   const products = $.getElementsByClassName("product");
   console.log(products);
 // const titleCategory=$.querySelectorAll(".category-style")

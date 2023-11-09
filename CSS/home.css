@@ -596,27 +596,27 @@ footer {
 /* end of btn  signin/ signup */
 
 /* search-input */
-#search-icon{
+.search-icon{
   color: #fff;
   margin-left: 0.4rem;
 }
 @media only screen and (max-width: 860px) {
-  #search-form {
+  .search-form {
     width: 20rem;
   }
 }
 @media only screen and (max-width: 655px) {
-  #search-form {
+  .search-form {
     width: 15rem;
   }
 }
 @media only screen and (max-width: 575px) {
-  #search-form {
+  .search-form {
     width:100%;
     margin:0.2rem;
 }
 }
-#search-form{
+.search-form{
   background: #00000070;
   color: gray;
 }
@@ -645,4 +645,7 @@ h5{
   border-radius:5px;
   padding:5px;
   cursor:pointer;
+}
+.hidden{
+  display: block;
 }
