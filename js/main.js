@@ -235,7 +235,7 @@ if(filterSearch.length){
   }
 }
 
-
+searchIcon.addEventListener("click", searchProducts)
 ////////////////categories/////////////////////
 const categoryTag=$.querySelectorAll(".category-tag");
 console.log(categoryTag)
