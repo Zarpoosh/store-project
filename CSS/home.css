@@ -609,13 +609,19 @@ footer {
 }
 @media only screen and (max-width: 575px) {
   .search-form {
-    width:100%;
+    width:80%;
+    height: 4vh;
     margin:0.2rem;   
+    position: absolute;
+    top: 7vh;
 }
 }
 .search-form{
   background: #00000070;
   color: gray;
+}
+.slider{
+  margin-top: 5vh;
 }
 
 /* ----------------------result-container----------------- */
@@ -644,13 +650,4 @@ h5{
   cursor:pointer;
 }
 
-@media only screen and (min-width: 575px) {
-  #add-searchbar{
-    display:none;  
-}
-}
-@media only screen and (max-width: 575px) {
-  .search-form-1{
-    display:none;  
-}
-}
+

@@ -111,12 +111,12 @@ const  dataProducts = [
 
 
 // Initial positioning of search form on page load
-handleSearchFormPosition();
+// handleSearchFormPosition();
 
-// Handle search form positioning on window resize
-window.addEventListener("resize", function () {
-  handleSearchFormPosition();
-});
+// // Handle search form positioning on window resize
+// window.addEventListener("resize", function () {
+//   handleSearchFormPosition();
+// });
 
 
 
@@ -129,6 +129,7 @@ function searchProducts() {
   const input = $.querySelector(".search-form input").value;
   const products = $.getElementsByClassName("product");
   console.log(products);
+  console.log(input)
 // const titleCategory=$.querySelectorAll(".category-style")
 let filterSearch=dataProducts.filter( (product)=>{
    return product.productName === input
