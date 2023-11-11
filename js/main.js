@@ -109,19 +109,6 @@ const  dataProducts = [
 //   }
 // });
 
-function handleSearchFormPosition() {
-  const form = $.querySelector(".search-form");
-  const div = $.getElementById("add-searchbar");
-  const navRight = $.getElementById("nav-right");
-
-  if (window.innerWidth < 575) {
-    form.classList.add("hidden");
-    div.classList.remove("hidden");
-  } else {
-    form.classList.remove("hidden");
-    div.classList.add("hidden")
-  }
-}
 
 // Initial positioning of search form on page load
 handleSearchFormPosition();
@@ -238,10 +225,10 @@ if(filterSearch.length){
 searchIcon.addEventListener("click", searchProducts)
 ////////////////categories/////////////////////
 const categoryTag=$.querySelectorAll(".category-tag");
-console.log(categoryTag)
-categoryTag.addEventListener("click" , function(){
-  console.log("clicked")
-})
+// console.log(categoryTag)
+// categoryTag.addEventListener("click" , function(){
+//   console.log("clicked")
+// })
 /**
    * Filters the given data based on the specified category.
    *

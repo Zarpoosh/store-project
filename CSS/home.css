@@ -117,8 +117,6 @@ header nav .nav-center .contact-btn a {
   font-size: 1em;
 }
 
-.slider .slides {
-}
 
 .slider .slides .item {
   position: relative;
@@ -277,8 +275,7 @@ header nav .nav-center .contact-btn a {
   border-bottom-left-radius: 20px;
 }
 
-.supper-offer-box .body {
-}
+
 
 .supper-offer-box .body .image-container {
   text-align: center;
@@ -613,7 +610,7 @@ footer {
 @media only screen and (max-width: 575px) {
   .search-form {
     width:100%;
-    margin:0.2rem;
+    margin:0.2rem;   
 }
 }
 .search-form{
@@ -646,6 +643,14 @@ h5{
   padding:5px;
   cursor:pointer;
 }
-.hidden{
-  display: block;
+
+@media only screen and (min-width: 575px) {
+  #add-searchbar{
+    display:none;  
+}
+}
+@media only screen and (max-width: 575px) {
+  .search-form-1{
+    display:none;  
+}
 }
