@@ -609,16 +609,24 @@ footer {
 }
 @media only screen and (max-width: 575px) {
   .search-form {
-    width:80%;
+    width:90%;
     height: 4vh;
+    margin: auto;
     margin:0.2rem;   
     position: absolute;
     top: 7vh;
 }
 }
+@media only screen and (max-width: 375px) {
+  .search-form {
+    margin-top: 0.6rem;
+  }
+}
 .search-form{
-  background: #00000070;
+  background: #00000059;
   color: gray;
+  border:1px solid gray;
+
 }
 .slider{
   margin-top: 5vh;
