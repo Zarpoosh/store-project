@@ -88,7 +88,7 @@ const  dataProducts = [
     const filterCategory = container.dataset.category;
     
     const dataFilter = filteredProducts(dataProducts, filterCategory);
-    console.log(dataFilter);
+    console.log("Load-Data-Dilter",dataFilter);
     // Generate the products for each category div
     generateProducts(dataFilter);
   }
@@ -128,24 +128,28 @@ const  dataProducts = [
 /////////////////////////input search///////////////////////
 const searchIcon = $.querySelector(".search-icon");
 function searchProducts() {
-  
+ 
+ var elm_Category=document.querySelectorAll(".category-style");
   var productsContainerAll =$.querySelector(".product-sec-new");
+  var elmContainerSearch= document.createElement("div");
+  elmContainerSearch.classList.add("ContainerSearch");
+productsContainerAll.appendChild(elmContainerSearch);
   console.log(productsContainerAll);
   const input = $.querySelector(".search-form input").value;
   const products = $.getElementsByClassName("product");
-  console.log(products);
-  console.log(input)
+  console.log("all class =.products",products);
+  // console.log(input)
 // const titleCategory=$.querySelectorAll(".category-style")
 let filterSearch=dataProducts.filter( (product)=>{
    return product.productName === input
   })
-console.log(filterSearch);
+console.log(filterSearch.length );
 if(filterSearch.length){
   console.log("search okey");
   for(i=0; i < products.length ; i++){
   products[i].classList.add("hidden");}
   for(i=0 ; i < filterSearch.length ; i++){
-  productsContainerAll.insertAdjacentHTML('beforeend', `
+  elmContainerSearch.insertAdjacentHTML('beforeend', `
           <div class="product col-lg-3 col-sm-4 col-xs-12">
             <div class="shoping-card">
               <div class="img-sec">
@@ -178,23 +182,56 @@ if(filterSearch.length){
             </div>
           </div>
         `);
+  
+         console.log('====================================');
+         console.log(elmContainerSearch);
+         console.log('====================================');
+   
+elm_Category.forEach((category_item)=>{
+
+  category_item.classList="hidden"
+})
+console.log('====================================');
+console.log(filterSearch);
+console.log('====================================');
 }
     
 } else {
   const containerProduct = $.querySelectorAll('.overflow');
+console.log('====================================');
+console.log(filterSearch);
+console.log('====================================');
+   //var elm_Category=document.querySelectorAll(".category-style")
 
   for(i=0; i < products.length ; i++){
-    products[i].classList.remove("hidden");}
-  
+    products[i].classList.remove("hidden");
+    
+  }
+
   // Filter the data for each category div
   for (let i = 0; i < containerProduct.length; i++) {
     const container = containerProduct[i];
     const filterCategory = container.dataset.category;
     
     const dataFilter = filteredProducts(dataProducts, filterCategory);
-    console.log(dataFilter);
+    console.log("Data-Filter-Input_Search",dataFilter);
     // Generate the products for each category div
+ 
     generateProducts(dataFilter);
+    elm_Category.forEach((category_item)=>{
+      console.log('====================================');
+      console.log(category_item);
+      console.log('====================================');
+      category_item.classList.remove("hidden")
+    })
+    console.log('====================================');
+    console.log(elmContainerSearch);
+    console.log('====================================');
+  var ClassContainerSearch =  $.querySelector('.ContainerSearch');
+   console.log('====================================');
+    console.log(ClassContainerSearch);
+    console.log('====================================');
+    ClassContainerSearch.remove();
   }
 }
 //   for (let i = 0; i < dataProducts.length; i++) {
@@ -265,6 +302,8 @@ const categoryTag=$.querySelectorAll(".category-tag");
    * @param {Array} dataFilter - The data filter to generate products from.
    */
   function generateProducts(dataFilter) {
+    var loadContainer =$.querySelector(".product-sec-new");
+    
     for (let i = 0; i < containerProduct.length; i++) {
       const container = containerProduct[i];
       const categoryFilter = filteredProducts(dataFilter, container.dataset.category);
