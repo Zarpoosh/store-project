@@ -267,7 +267,6 @@ console.log('====================================');
     if (productsCategory[i], title[i].classList.contains(cat)) {
       productsCategory[i].style.display = "flex";
       title[i].style.display = "flex";
-      catBtn.style.backgroundColor="red";
 
     } else {
       productsCategory[i].style.display = "none";
