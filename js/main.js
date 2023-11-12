@@ -211,14 +211,26 @@ if(filterSearch.length){
 //     // } 
 // }
  }
- function showProducts(cat) {
+ function showProducts(cat , buttonElement) {
   var productsCategory = $.getElementsByClassName('overflow');
   var title=$.getElementsByClassName("category-style")
+  var buttons = $.getElementsByClassName('cat-btn'); // Replace 'your-button-class' with the actual class name of your buttons
+  console.log(cat)
+
+  // Remove red background from all buttons
+  for (var j = 0; j < buttons.length; j++) {
+    buttons[j].style.backgroundColor = "";
+  }
+
+  // Change background color of the clicked button to red
+  buttonElement.style.backgroundColor = " rgba(255, 174, 0, 0.651)";
+  
   // console.log(productsCategory)
   for (var i = 0; i < productsCategory , title.length; i++) {
     if (productsCategory[i], title[i].classList.contains(cat)) {
       productsCategory[i].style.display = "flex";
       title[i].style.display = "flex";
+      catBtn.style.backgroundColor="red";
 
     } else {
       productsCategory[i].style.display = "none";
