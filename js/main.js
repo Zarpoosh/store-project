@@ -1,3 +1,7 @@
+
+// test
+
+
 let slideIndex = 1;
 let remainingTime = 70000;
 const $ = document;
@@ -234,19 +238,6 @@ console.log('====================================');
     ClassContainerSearch.remove();
   }
 }
-//   for (let i = 0; i < dataProducts.length; i++) {
-//     var productName = dataProducts[i].productName;
-// console.log(productName);
-//     if (productName.includes(input)) {
-//       products[i].classList.remove("hidden");
-//     } else {
-//       products[i].classList.add("hidden");
-//     }
-//     // if (productName.includes(input)) {
-//     //   error.innerHTML = "محصول پیدا نشد.";
-
-//     // } 
-// }
  }
  function showProducts(cat , buttonElement) {
   var productsCategory = $.getElementsByClassName('overflow');
@@ -271,7 +262,6 @@ console.log('====================================');
     } else {
       productsCategory[i].style.display = "none";
       title[i].style.display = "none";
-
     }
   }
 }
