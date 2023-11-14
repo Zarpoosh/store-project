@@ -1,6 +1,10 @@
+
+// test
+
+
 let slideIndex = 1;
 let remainingTime = 70000;
-const $= document;
+const $ = document;
 
 // function setTime() {
 //   if (remainingTime == 0) return;
@@ -50,8 +54,10 @@ const  dataProducts = [
   
   {id: 6,  imgSrc: './images/product4.png',  productName: 'پالتو مردانه',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
   {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی', price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 4,  imgSrc: './images/product1.png',  productName: 'کاپشن کوهنوردی' ,category : "مردانه" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
   {id: 13, imgSrc: './images/product11.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
   {id: 16, imgSrc: './images/product14.png', productName: 'ست لی', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
 
@@ -78,7 +84,205 @@ const  dataProducts = [
 
   const containerProduct = $.querySelectorAll('.overflow');
 
-  /**
+  
+  
+  // Filter the data for each category div
+  for (let i = 0; i < containerProduct.length; i++) {
+    const container = containerProduct[i];
+    const filterCategory = container.dataset.category;
+    
+    const dataFilter = filteredProducts(dataProducts, filterCategory);
+    console.log("Load-Data-Dilter",dataFilter);
+    // Generate the products for each category div
+    generateProducts(dataFilter);
+  }
+
+
+
+
+  // ////////////////////  new js  ///////////////////////////
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth < 575) {
+//     let form = $.getElementById("search-form");
+//     let div = $.getElementById("add-searchbar");
+//     div.appendChild(form);
+//   } else {
+//     if (window.innerWidth > 575) {
+//       let form = $.getElementById("search-form");
+//       let div = $.getElementById("add-searchbar");
+//       let navRight = $.getElementById("nav-right");
+
+//       div.removeChild(form);
+//       navRight.appendChild(form);
+//     }
+//   }
+// });
+
+
+// Initial positioning of search form on page load
+// handleSearchFormPosition();
+
+// // Handle search form positioning on window resize
+// window.addEventListener("resize", function () {
+//   handleSearchFormPosition();
+// });
+
+var productsContainerAll =$.querySelector(".product-sec-new");
+var elmContainerSearch= document.createElement("div");
+var elm_Category=document.getElementsByClassName("category-style");
+console.log('====================================');
+console.log("first__category",elm_Category);
+console.log('====================================');
+/////////////////////////input search///////////////////////
+const searchIcon = $.querySelector(".search-icon");
+function searchProducts() {
+ 
+
+ 
+  elmContainerSearch.classList.add("ContainerSearch");
+productsContainerAll.appendChild(elmContainerSearch);
+  console.log(productsContainerAll);
+  const input = $.querySelector(".search-form input").value;
+  const products = $.getElementsByClassName("product");
+  console.log("all class =.products",products);
+  // console.log(input)
+// const titleCategory=$.querySelectorAll(".category-style")
+let filterSearch=dataProducts.filter( (product)=>{
+   return product.productName === input
+  })
+console.log(filterSearch );
+if(filterSearch.length){
+  console.log("search okey");
+  for(i=0; i < products.length ; i++){
+  products[i].classList.add("hidden");}
+  for(i in filterSearch){
+  elmContainerSearch.insertAdjacentHTML('beforeend', `
+          <div class="product col-lg-3 col-sm-4 col-xs-12">
+            <div class="shoping-card">
+              <div class="img-sec">
+                <img src="${filterSearch[i].imgSrc}" alt="">
+                <span class="hot-offer">پیشنهاد ویژه</span>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <h3>${filterSearch[i].productName}</h3>
+              <h5>${filterSearch[i].category}</h5>
+              <div class="buttons">
+                <div class="right">
+                  <span class="price">${filterSearch[i].price}</span>
+                </div>
+                <div class="left">
+                  <div class="extend-btn">
+                    <a class="b-text" href="">علاقه</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                  </div>
+                  <div class="extend-btn">
+                    <a class="b-text" href="">خرید</a>
+                    <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
+  
+         console.log('====================================');
+         console.log(elmContainerSearch);
+         console.log('====================================');
+   for(i=0; i < elm_Category.length ; i++){
+    elm_Category[i].classList.add("hidden");
+   }
+// elm_Category.forEach((category_item)=>{
+
+//   category_item.classList="hidden"
+// })
+
+}
+    
+} else {
+  const containerProduct = $.querySelectorAll('.overflow');
+console.log('====================================');
+console.log(filterSearch);
+console.log('====================================');
+   //var elm_Category=document.querySelectorAll(".category-style")
+
+  for(i=0; i < products.length ; i++){
+    products[i].classList.remove("hidden");
+    
+  }
+
+  // Filter the data for each category div
+  for (let i = 0; i < containerProduct.length; i++) {
+    const container = containerProduct[i];
+    const filterCategory = container.dataset.category;
+    
+    const dataFilter = filteredProducts(dataProducts, filterCategory);
+    console.log("Data-Filter-Input_Search",dataFilter);
+    // Generate the products for each category div
+    console.log("elm_Category",elm_Category);
+    for(i=0; i < elm_Category.length ; i++){
+      elm_Category[i].classList.remove("hidden")
+     }
+    generateProducts(dataFilter);
+  console.log("elm_Category",elm_Category);
+    // elm_Category.forEach((category_item)=>{
+    //   console.log('====================================');
+    //   console.log(category_item);
+    //   console.log('====================================');
+    //   category_item.
+    // })
+    console.log('====================================');
+    console.log(elmContainerSearch);
+    console.log('====================================');
+    if($.querySelector('.ContainerSearch')){
+  var ClassContainerSearch =  $.querySelector('.ContainerSearch');
+   console.log('====================================');
+    console.log(ClassContainerSearch);
+    console.log('====================================');
+    ClassContainerSearch.remove();
+    }
+  }
+}
+ }
+ function showProducts(cat , buttonElement) {
+  var productsCategory = $.getElementsByClassName('overflow');
+  var title=$.getElementsByClassName("category-style")
+  var buttons = $.getElementsByClassName('cat-btn'); // Replace 'your-button-class' with the actual class name of your buttons
+  console.log(cat)
+
+  // Remove red background from all buttons
+  for (var j = 0; j < buttons.length; j++) {
+    buttons[j].style.backgroundColor = "";
+  }
+
+  // Change background color of the clicked button to red
+  buttonElement.style.backgroundColor = " rgba(255, 174, 0, 0.651)";
+  
+  // console.log(productsCategory)
+  for (var i = 0; i < productsCategory , title.length; i++) {
+    if (productsCategory[i], title[i].classList.contains(cat)) {
+      productsCategory[i].style.display = "flex";
+      title[i].style.display = "flex";
+
+    } else {
+      productsCategory[i].style.display = "none";
+      title[i].style.display = "none";
+    }
+  }
+}
+
+searchIcon.addEventListener("click", searchProducts)
+////////////////categories/////////////////////
+const categoryTag=$.querySelectorAll(".category-tag");
+// console.log(categoryTag)
+// categoryTag.addEventListener("click" , function(){
+//   console.log("clicked")
+// })
+/**
    * Filters the given data based on the specified category.
    *
    * @param {Array} data - The data to be filtered.
@@ -96,6 +300,8 @@ const  dataProducts = [
    * @param {Array} dataFilter - The data filter to generate products from.
    */
   function generateProducts(dataFilter) {
+    var loadContainer =$.querySelector(".product-sec-new");
+    
     for (let i = 0; i < containerProduct.length; i++) {
       const container = containerProduct[i];
       const categoryFilter = filteredProducts(dataFilter, container.dataset.category);
@@ -140,100 +346,3 @@ const  dataProducts = [
       }
     }
   }
-  
-  // Filter the data for each category div
-  for (let i = 0; i < containerProduct.length; i++) {
-    const container = containerProduct[i];
-    const filterCategory = container.dataset.category;
-    const dataFilter = filteredProducts(dataProducts, filterCategory);
-  
-    // Generate the products for each category div
-    generateProducts(dataFilter);
-  }
-
-
-
-
-  // ////////////////////  new js  ///////////////////////////
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth < 575) {
-//     let form = $.getElementById("search-form");
-//     let div = $.getElementById("add-searchbar");
-//     div.appendChild(form);
-//   } else {
-//     if (window.innerWidth > 575) {
-//       let form = $.getElementById("search-form");
-//       let div = $.getElementById("add-searchbar");
-//       let navRight = $.getElementById("nav-right");
-
-//       div.removeChild(form);
-//       navRight.appendChild(form);
-//     }
-//   }
-// });
-
-function handleSearchFormPosition() {
-  const form = $.getElementById("#search-form");
-  const div = $.getElementById("#add-searchbar");
-  const navRight = $.getElementById("#nav-right");
-
-  if (window.innerWidth < 575) {
-    div.append(form);
-
-  } else {
-    navRight.append(form);
-  }
-}
-
-// Initial positioning of search form on page load
-// handleSearchFormPosition();
-
-// Handle search form positioning on window resize
-window.addEventListener("resize", function () {
-  handleSearchFormPosition();
-});
-
-
-
-/////////////////////////input search///////////////////////
-const searchIcon = $.querySelector("#search-icon");
-function searchProducts() {
-  // console.log("clicked");
-
-  const input = $.querySelector("#search-form input").value;
-  const products = $.getElementsByClassName("product");
-
-  for (let i = 0; i < products.length; i++) {
-    var productName = products[i].textContent;
-
-    if (productName.includes(input)) {
-      products[i].classList.remove("hidden");
-    } else {
-      products[i].classList.add("hidden");
-    }
-    // if (productName.includes(input)) {
-    //   error.innerHTML = "محصول پیدا نشد.";
-
-    // } 
-}
-}
-
-
-
-////////////////categories btn/////////////////////
-function showProducts(cat) {
-  var productsCategory = $.getElementsByClassName('overflow');
-  var title=$.getElementsByClassName("category-style")
-  // console.log(productsCategory)
-  for (var i = 0; i < productsCategory , title.length; i++) {
-    if (productsCategory[i], title[i].classList.contains(cat)) {
-      productsCategory[i].style.display = "flex";
-      title[i].style.display = "flex";
-
-    } else {
-      productsCategory[i].style.display = "none";
-      title[i].style.display = "none";
-
-    }
-  }
-}

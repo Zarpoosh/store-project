@@ -117,8 +117,6 @@ header nav .nav-center .contact-btn a {
   font-size: 1em;
 }
 
-.slider .slides {
-}
 
 .slider .slides .item {
   position: relative;
@@ -277,8 +275,7 @@ header nav .nav-center .contact-btn a {
   border-bottom-left-radius: 20px;
 }
 
-.supper-offer-box .body {
-}
+
 
 .supper-offer-box .body .image-container {
   text-align: center;
@@ -596,29 +593,45 @@ footer {
 /* end of btn  signin/ signup */
 
 /* search-input */
-#search-icon{
+.search-icon{
   color: #fff;
   margin-left: 0.4rem;
+  background: transparent;
+  border: none;
 }
 @media only screen and (max-width: 860px) {
-  #search-form {
+  .search-form {
     width: 20rem;
   }
 }
 @media only screen and (max-width: 655px) {
-  #search-form {
+  .search-form {
     width: 15rem;
   }
 }
 @media only screen and (max-width: 575px) {
-  #search-form {
-    width:100%;
-    margin:0.2rem;
+  .search-form {
+    width:90%;
+    height: 4vh;
+    margin: auto;
+    margin:0.2rem;   
+    position: absolute;
+    top: 7vh;
 }
 }
-#search-form{
-  background: #00000070;
+@media only screen and (max-width: 375px) {
+  .search-form {
+    margin-top: 0.6rem;
+  }
+}
+.search-form{
+  background: #00000059;
   color: gray;
+  border:1px solid gray;
+
+}
+.slider{
+  margin-top: 5vh;
 }
 
 /* ----------------------result-container----------------- */
@@ -640,9 +653,11 @@ h5{
   margin: 2rem;
 }
 #tag-btn button{
-  margin-right:1rem;
+  margin:0.3rem;
   border:1px solid gray;
   border-radius:5px;
   padding:5px;
   cursor:pointer;
 }
+
+
