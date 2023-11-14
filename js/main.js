@@ -127,15 +127,18 @@ const  dataProducts = [
 //   handleSearchFormPosition();
 // });
 
-
-
+var productsContainerAll =$.querySelector(".product-sec-new");
+var elmContainerSearch= document.createElement("div");
+var elm_Category=document.getElementsByClassName("category-style");
+console.log('====================================');
+console.log("first__category",elm_Category);
+console.log('====================================');
 /////////////////////////input search///////////////////////
 const searchIcon = $.querySelector(".search-icon");
 function searchProducts() {
  
- var elm_Category=document.querySelectorAll(".category-style");
-  var productsContainerAll =$.querySelector(".product-sec-new");
-  var elmContainerSearch= document.createElement("div");
+
+ 
   elmContainerSearch.classList.add("ContainerSearch");
 productsContainerAll.appendChild(elmContainerSearch);
   console.log(productsContainerAll);
@@ -147,12 +150,12 @@ productsContainerAll.appendChild(elmContainerSearch);
 let filterSearch=dataProducts.filter( (product)=>{
    return product.productName === input
   })
-console.log(filterSearch.length );
+console.log(filterSearch );
 if(filterSearch.length){
   console.log("search okey");
   for(i=0; i < products.length ; i++){
   products[i].classList.add("hidden");}
-  for(i=0 ; i < filterSearch.length ; i++){
+  for(i in filterSearch){
   elmContainerSearch.insertAdjacentHTML('beforeend', `
           <div class="product col-lg-3 col-sm-4 col-xs-12">
             <div class="shoping-card">
@@ -190,14 +193,14 @@ if(filterSearch.length){
          console.log('====================================');
          console.log(elmContainerSearch);
          console.log('====================================');
-   
-elm_Category.forEach((category_item)=>{
+   for(i=0; i < elm_Category.length ; i++){
+    elm_Category[i].classList.add("hidden");
+   }
+// elm_Category.forEach((category_item)=>{
 
-  category_item.classList="hidden"
-})
-console.log('====================================');
-console.log(filterSearch);
-console.log('====================================');
+//   category_item.classList="hidden"
+// })
+
 }
     
 } else {
@@ -220,22 +223,28 @@ console.log('====================================');
     const dataFilter = filteredProducts(dataProducts, filterCategory);
     console.log("Data-Filter-Input_Search",dataFilter);
     // Generate the products for each category div
- 
+    console.log("elm_Category",elm_Category);
+    for(i=0; i < elm_Category.length ; i++){
+      elm_Category[i].classList.remove("hidden")
+     }
     generateProducts(dataFilter);
-    elm_Category.forEach((category_item)=>{
-      console.log('====================================');
-      console.log(category_item);
-      console.log('====================================');
-      category_item.classList.remove("hidden")
-    })
+  console.log("elm_Category",elm_Category);
+    // elm_Category.forEach((category_item)=>{
+    //   console.log('====================================');
+    //   console.log(category_item);
+    //   console.log('====================================');
+    //   category_item.
+    // })
     console.log('====================================');
     console.log(elmContainerSearch);
     console.log('====================================');
+    if($.querySelector('.ContainerSearch')){
   var ClassContainerSearch =  $.querySelector('.ContainerSearch');
    console.log('====================================');
     console.log(ClassContainerSearch);
     console.log('====================================');
     ClassContainerSearch.remove();
+    }
   }
 }
  }
