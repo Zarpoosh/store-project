@@ -92,37 +92,6 @@ const  dataProducts = [
     // Generate the products for each category div
     generateProducts(dataFilter);
   }
-
-
-
-
-  // ////////////////////  new js  ///////////////////////////
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth < 575) {
-//     let form = $.getElementById("search-form");
-//     let div = $.getElementById("add-searchbar");
-//     div.appendChild(form);
-//   } else {
-//     if (window.innerWidth > 575) {
-//       let form = $.getElementById("search-form");
-//       let div = $.getElementById("add-searchbar");
-//       let navRight = $.getElementById("nav-right");
-
-//       div.removeChild(form);
-//       navRight.appendChild(form);
-//     }
-//   }
-// });
-
-
-// Initial positioning of search form on page load
-// handleSearchFormPosition();
-
-// // Handle search form positioning on window resize
-// window.addEventListener("resize", function () {
-//   handleSearchFormPosition();
-// });
-
 var productsContainerAll =$.querySelector(".product-sec-new");
 var elmContainerSearch= document.createElement("div");
 var elm_Category=document.getElementsByClassName("category-style");
@@ -134,8 +103,10 @@ const searchIcon = $.querySelector(".search-icon");
 function searchProducts() {
  
 
- 
-  elmContainerSearch.classList.add("ContainerSearch");
+ let nameClassContainer = "ContainerSearch overflow row exesory all";
+  elmContainerSearch.classList.add('ContainerSearch');
+  elmContainerSearch.classList.add('overflow');
+  elmContainerSearch.classList.add('row');
 productsContainerAll.appendChild(elmContainerSearch);
   console.log(productsContainerAll);
   const input = $.querySelector(".search-form input").value;

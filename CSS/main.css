@@ -18,6 +18,8 @@ a {
 }
 
 .overflow{
-  overflow: scroll;
-  flex-wrap: nowrap;
+  overflow: auto;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
