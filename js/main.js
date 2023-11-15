@@ -1,7 +1,3 @@
-
-// test
-
-
 let slideIndex = 1;
 let remainingTime = 70000;
 const $ = document;
