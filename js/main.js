@@ -92,19 +92,16 @@ const  dataProducts = [
     // Generate the products for each category div
     generateProducts(dataFilter);
   }
+var container_category = $.querySelector("#tag-btn");
 var productsContainerAll =$.querySelector(".product-sec-new");
 var elmContainerSearch= document.createElement("div");
 var elm_Category=document.getElementsByClassName("category-style");
 console.log('====================================');
-console.log("first__category",elm_Category);
+console.log("first__category",container_category);
 console.log('====================================');
 /////////////////////////input search///////////////////////
 const searchIcon = $.querySelector(".search-icon");
 function searchProducts() {
- 
-
- let nameClassContainer = "ContainerSearch overflow row exesory all";
-  elmContainerSearch.classList.add('ContainerSearch');
   elmContainerSearch.classList.add('overflow');
   elmContainerSearch.classList.add('row');
 productsContainerAll.appendChild(elmContainerSearch);
@@ -119,6 +116,7 @@ let filterSearch=dataProducts.filter( (product)=>{
   })
 console.log(filterSearch );
 if(filterSearch.length){
+  container_category.classList.add('hidden');
   console.log("search okey");
   for(i=0; i < products.length ; i++){
   products[i].classList.add("hidden");}
@@ -176,7 +174,7 @@ console.log('====================================');
 console.log(filterSearch);
 console.log('====================================');
    //var elm_Category=document.querySelectorAll(".category-style")
-
+   container_category.classList.remove('hidden');
   for(i=0; i < products.length ; i++){
     products[i].classList.remove("hidden");
     
@@ -230,8 +228,8 @@ console.log('====================================');
   buttonElement.style.backgroundColor = " rgba(255, 174, 0, 0.651)";
   
   // console.log(productsCategory)
-  for (var i = 0; i < productsCategory , title.length; i++) {
-    if (productsCategory[i], title[i].classList.contains(cat)) {
+  for (var i = 0; i < productsCategory.length; i++) {
+    if ( title[i].classList.contains(cat)) {
       productsCategory[i].style.display = "flex";
       title[i].style.display = "flex";
 
