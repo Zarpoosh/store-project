@@ -230,8 +230,8 @@ console.log('====================================');
   buttonElement.style.backgroundColor = " rgba(255, 174, 0, 0.651)";
   
   // console.log(productsCategory)
-  for (var i = 0; i < productsCategory , title.length; i++) {
-    if (productsCategory[i], title[i].classList.contains(cat)) {
+  for (var i = 0; i < productsCategory.length; i++) {
+    if ( title[i].classList.contains(cat)) {
       productsCategory[i].style.display = "flex";
       title[i].style.display = "flex";
 
