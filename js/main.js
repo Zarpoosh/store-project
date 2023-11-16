@@ -102,6 +102,7 @@ console.log('====================================');
 /////////////////////////input search///////////////////////
 const searchIcon = $.querySelector(".search-icon");
 function searchProducts() {
+  elmContainerSearch.classList.add("ContainerSearch")
   elmContainerSearch.classList.add('overflow');
   elmContainerSearch.classList.add('row');
 productsContainerAll.appendChild(elmContainerSearch);
@@ -115,6 +116,7 @@ let filterSearch=dataProducts.filter( (product)=>{
    return product.productName === input
   })
 console.log(filterSearch );
+
 if(filterSearch.length){
   container_category.classList.add('hidden');
   console.log("search okey");
