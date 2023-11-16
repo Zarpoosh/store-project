@@ -622,6 +622,7 @@ footer {
   .search-form {
     margin-top: 0.6rem;
     margin-bottom:1rem
+    /* margin:auto; */
   }
 }
 .search-form{
