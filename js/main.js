@@ -232,12 +232,14 @@ console.log('====================================');
   // console.log(productsCategory)
   for (var i = 0; i < productsCategory.length; i++) {
     if ( title[i].classList.contains(cat)) {
-      productsCategory[i].style.display = "flex";
-      title[i].classList.add("flex")
+      productsCategory[i].classList.remove("hidden")
+
+      title[i].classList.remove("hidden")
 
     } else {
-      productsCategory[i].style.display = "none";
-      // title[i].classList.add("hidden")
+      productsCategory[i].classList.add("hidden")
+
+      title[i].classList.add("hidden")
     }
   }
 }
