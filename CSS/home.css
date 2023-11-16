@@ -614,7 +614,6 @@ footer {
     width:90%;
     height: 4vh;
     margin: auto;
-    margin:0.2rem;   
     position: absolute;
     top: 7vh;
 }
@@ -622,6 +621,7 @@ footer {
 @media only screen and (max-width: 375px) {
   .search-form {
     margin-top: 0.6rem;
+    margin-bottom:1rem
   }
 }
 .search-form{
