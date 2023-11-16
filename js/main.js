@@ -233,11 +233,11 @@ console.log('====================================');
   for (var i = 0; i < productsCategory.length; i++) {
     if ( title[i].classList.contains(cat)) {
       productsCategory[i].style.display = "flex";
-      title[i].style.display = "flex";
+      title[i].classList.remove("hidden")
 
     } else {
       productsCategory[i].style.display = "none";
-      title[i].style.display = "none";
+      title[i].classList.add("hidden")
     }
   }
 }
