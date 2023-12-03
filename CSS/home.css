@@ -620,8 +620,7 @@ footer {
 }
 @media only screen and (max-width: 375px) {
   .search-form {
-    margin-top: 0.6rem;
-    margin-bottom:1rem
+   top:8.9vh
     /* margin:auto; */
   }
 }

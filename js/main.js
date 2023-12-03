@@ -40,41 +40,38 @@ setInterval(() => {
 
 //?============= dataProducts =============\\
 const  dataProducts = [
-  {id: 11, imgSrc: './images/product9.png',  productName: 'Clothes 12', price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
-  {id: 1,  imgSrc: './images/product12.png', productName: 'تیشرت مشکی'  ,category : "زنانه" ,price: '25,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 2,  imgSrc: './images/P6.jpg',        productName: 'لباس محلی'   ,category : "زنانه" ,price: '35,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 3,  imgSrc: './images/P8.jpg',        productName: 'دامن مجلسی'  ,category : "زنانه" ,price: '22,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 10, imgSrc: './images/product8.png',  productName: 'کیف مجلسی', price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
-  {id: 12, imgSrc: './images/product10.png', productName: 'شلوار لی ', price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
-  {id: 0,  imgSrc: './images/product2.png',  productName: 'مانتو پاییزی'   ,category : "زنانه" ,price: '30,0', star: 3 , like:true , off : false , bascket : false},
-  
-  {id: 6,  imgSrc: './images/product4.png',  productName: 'پالتو مردانه',      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی', price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
-  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
-  {id: 4,  imgSrc: './images/product1.png',  productName: 'کاپشن کوهنوردی' ,category : "مردانه" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 13, imgSrc: './images/product11.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
-  {id: 16, imgSrc: './images/product14.png', productName: 'ست لی', price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 11, imgSrc: './images/product9.png',  productName: 'Clothes 12',url:"../login.html", price: '40,0', star: 3 , category : "shoes" , like:true , off : false , bascket : false},
+  {id: 1,  imgSrc: './images/product12.png', productName: 'تیشرت مشکی',url:"./"  ,category : "زنانه" ,price: '25,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 2,  imgSrc: './images/P6.jpg',        productName: 'لباس محلی' ,url:"./"  ,category : "زنانه" ,price: '35,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 3,  imgSrc: './images/P8.jpg',        productName: 'دامن مجلسی',url:"./"  ,category : "زنانه" ,price: '22,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 10, imgSrc: './images/product8.png',  productName: 'کیف مجلسی',url:"./", price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
+  {id: 12, imgSrc: './images/product10.png', productName: 'شلوار لی ',url:"./"  ,category : "زنانه" ,  price: '40,0', star: 3 , category : "زنانه" , like:true , off : false , bascket : false},
+  {id: 0,  imgSrc: './images/product2.png',  productName: 'مانتو پاییزی' ,url:"./"  ,category : "زنانه" ,price: '30,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 6,  imgSrc: './images/product4.png',  productName: 'پالتو مردانه',url:"./",      category : "مردانه" ,price: '32,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 9,  imgSrc: './images/product7.png',  productName: 'تیشرت مشکی',url:"./"  , price: '40,0',  star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی', url:"./",        category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 17, imgSrc: './images/product15.png', productName: 'ست لی جدید',url:"./"  , price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 4,  imgSrc: './images/product1.png',  productName: 'کاپشن کوهنوردی' ,url:"./"  , category : "مردانه" ,price: '29,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',url:"./" ,      category : "مردانه" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 13, imgSrc: './images/product11.png', productName: 'کت و شلوار',url:"./"  ,       price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 16, imgSrc: './images/product14.png', productName: 'ست لی'   , url:"./",       price: '40,0', star: 3 , category : "مردانه" , like:true , off : false , bascket : false},
+  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',   url:"./" ,     category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',     url:"./" ,  category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 27,  imgSrc: './images/shoes2.jpg',  productName: 'کفش ورزشی',      url:"./" ,  category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 28,  imgSrc: './images/shoes.jpg',  productName: 'کفش مجلسی',       url:"./" , category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 5,  imgSrc: './images/product3.png', url:"./" ,productName: 'تیشرت مشکی'  ,category : "دخترانه" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
+  {id: 25, imgSrc: './images/P9.jpg',       url:"./" ,productName: 'کت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+  {id: 14, imgSrc: './images/product12.png',url:"./" ,productName: 'تیشرت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+  {id: 15, imgSrc: './images/product13.png',url:"./" ,productName: 'کت و شلوار', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
+  {id: 26, imgSrc: './images/P12.jpg',      url:"./" ,productName: 'شلوار کتان', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
 
-  {id: 7,  imgSrc: './images/product5.png',  productName: 'کلاه آفتابی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 8,  imgSrc: './images/product6.png',  productName: 'کفش ورزشی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 27,  imgSrc: './images/shoes2.jpg',  productName: 'کفش ورزشی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 28,  imgSrc: './images/shoes.jpg',  productName: 'کفش مجلسی',category : "کفش" ,price: '40,0', star: 3 , like:true , off : false , bascket : false},
- 
-  {id: 5,  imgSrc: './images/product3.png',  productName: 'تیشرت مشکی'  ,category : "دخترانه" ,price: '24,0', star: 3 , like:true , off : false , bascket : false},
-  {id: 25, imgSrc: './images/P9.jpg', productName: 'کت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
-  {id: 14, imgSrc: './images/product12.png', productName: 'تیشرت مجلسی', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
-  {id: 15, imgSrc: './images/product13.png', productName: 'کت و شلوار', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
-  {id: 26, imgSrc: './images/P12.jpg', productName: 'شلوار کتان', price: '40,0', star: 3 , category : "دخترانه" , like:true , off : false , bascket : false},
-
-  {id: 18, imgSrc: './images/h1.jpg', productName: 'هنسفری بلوتوثی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
-  {id: 19, imgSrc: './images/h2.jpg', productName: 'هنسفری', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
-  {id: 20, imgSrc: './images/h3.jpg', productName: 'هنسفری سیمی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
-  {id: 21, imgSrc: './images/h4.jpg', productName: 'هنسفری', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
-  {id: 22, imgSrc: './images/h5.jpg', productName: 'هدفون', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
-  {id: 23, imgSrc: './images/h6.jpg', productName: 'هدفون بلوتوثی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
-  {id: 24, imgSrc: './images/super-product.jpg', productName: 'هدفون بی سیم', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 18, imgSrc: './images/h1.jpg',url:"./", productName: 'هنسفری بلوتوثی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 19, imgSrc: './images/h2.jpg',url:"./", productName: 'هنسفری', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 20, imgSrc: './images/h3.jpg',url:"./", productName: 'هنسفری سیمی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 21, imgSrc: './images/h4.jpg',url:"./", productName: 'هنسفری', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 22, imgSrc: './images/h5.jpg',url:"./", productName: 'هدفون', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 23, imgSrc: './images/h6.jpg',url:"./"       , productName: 'هدفون بلوتوثی', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
+  {id: 24, imgSrc: './images/super-product.jpg',url:"./" , productName: 'هدفون بی سیم', price: '40,0', star: 3 , category : "هدفون" , like:true , off : false , bascket : false},
 
   ]
 
@@ -148,9 +145,9 @@ if(filterSearch.length){
                     <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
                   </div>
                   <div class="extend-btn">
-                    <a class="b-text" href="">خرید</a>
-                    <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                  </div>
+                    <a class="b-text" href="${product.url}">خرید</a>
+                    <a class="b-icon" href="${product.url}"><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>                    
                 </div>
               </div>
             </div>
@@ -300,12 +297,12 @@ const categoryTag=$.querySelectorAll(".category-tag");
                 </div>
                 <div class="left">
                   <div class="extend-btn">
-                    <a class="b-text" href="">علاقه</a>
-                    <a class="b-icon" href=""><i class="fa-solid fa-heart"></i></a>
+                    <a class="b-text" href="${product.url}">علاقه</a>
+                    <a class="b-icon" href="${product.url}"><i class="fa-solid fa-heart"></i></a>
                   </div>
                   <div class="extend-btn">
-                    <a class="b-text" href="">خرید</a>
-                    <a class="b-icon" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a class="b-text" href="${product.url}">خرید</a>
+                    <a class="b-icon" href="${product.url}"><i class="fa-solid fa-cart-shopping"></i></a>
                   </div>
                 </div>
               </div>
